@@ -4,25 +4,25 @@ using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public interface IAbility
+public interface IAbility<T>
 {
-    void Update<T>(T[] args);
-    void Start<T>(T[] args);
+    void Update(T args) { }
+    void Start(T args) { }
 };
 
-public interface IPassiveAbility : IAbility
+public interface IPassiveAbility<T> : IAbility<T>
 {
 
 }
 
-public interface IActiveAbility : IAbility
+public interface IActiveAbility<T> : IAbility<T>
 {
-    double chargeRate { get; set; }
-    double maxCharge { get; }
-    double currentCharge { get; set; }
+    float chargeRate { get; set; }
+    float maxCharge { get; }
+    float currentCharge { get; set; }
 }
 
-public interface IUltimateAbility : IActiveAbility
+public interface IUltimateAbility<T> : IActiveAbility<T>
 {
     
 }
@@ -38,14 +38,15 @@ public interface IPlayerMessages : IEventSystemHandler
     void OnPlayerInteract(Transform player) { }
 }
 
+// TODO: Create ability information interfaces
 public struct PlayerStats
 {
     public uint Speed;
     public static float SpeedMultiplier = 3/2;
     public uint HP;
-    public IPassiveAbility passive;
-    public IActiveAbility active;
-    public IUltimateAbility ultimate;
+    public IPassiveAbility<Transform> passive;
+    public IActiveAbility<Transform> active;
+    public IUltimateAbility<Transform> ultimate;
 }
 
 public class BasicPlayerController : MonoBehaviour

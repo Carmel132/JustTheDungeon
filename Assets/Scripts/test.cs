@@ -22,6 +22,6 @@ public class test : MonoBehaviour, IPlayerMessages
 
     public void OnPlayerMove(Transform player)
     {
-        Debug.Log("messages are so cool!");
+        //Debug.Log("messages are so cool!");
     }
 }
