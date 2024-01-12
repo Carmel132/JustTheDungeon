@@ -57,11 +57,20 @@ public class EventManager : MonoBehaviour, IPlayerMessages
             ExecuteEvents.Execute<IPlayerMessages>(obj, null, (x, y) => x.OnPlayerInteract(transform));
         }
     }
+
+    public void PlayerChargeUlt(float damage)
+    {
+        foreach (var obj in register[EventGroup.Player])
+        {
+            ExecuteEvents.Execute<IPlayerMessages>(obj, null, (x, y) => x.PlayerChargeUlt(damage));
+        }
+    }
     public void registerEvent(EventGroup eventGroup, GameObject obj)
     {
         if (!register.ContainsKey(eventGroup)){ register.Add(eventGroup, new List<GameObject>()); }
         register[eventGroup].Add(obj);
     }
+
     public void deregisterEvent(EventGroup eventGroup, GameObject obj)
     {
         register[eventGroup].Remove(obj);

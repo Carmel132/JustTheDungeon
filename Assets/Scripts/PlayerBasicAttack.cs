@@ -132,10 +132,11 @@ public class BasicProjectile
     public void Start()
     {
         proj = GameObject.Instantiate(info.proj);
-        proj.transform.position = info.start;
+        proj.transform.position = (Vector2)info.start;
         proj.transform.SetParent(info.parent);
+        //transform.right = target.position - transform.position;
         Vector2 dir = Quaternion.Euler(0, 0, Random.Range(-info.bloom, info.bloom)) * ((Vector2)info.target - (Vector2)proj.transform.position).normalized * info.projSpeed;
-        Debug.Log((info.target - proj.transform.position).normalized);
+        proj.transform.right = dir - (Vector2)proj.transform.position;
         proj.GetComponent<Rigidbody2D>().AddForce(dir);
         GameObject.Destroy(proj, info.lifetime);
     }
@@ -169,7 +170,7 @@ public class GunBasicAbility : IBasicAbility<Vector3, IGunBasicAbilityInfo>
 public class PlayerBasicAttack : MonoBehaviour
 {
     public GameObject proj;
-    ICooldown cd = new TimeCooldown();
+    public ICooldown cd = new TimeCooldown();
     public float speed;
     public float lifetime;
     public float bloom;
@@ -177,17 +178,21 @@ public class PlayerBasicAttack : MonoBehaviour
     public Transform start;
     IBasicAbility<Vector3, IGunBasicAbilityInfo> ability = new GunBasicAbility();
 
+    bool isPlayerHoldingDownMouse = false;
+
     // Start is called before the first frame update
     void Start()
     {
         cd.duration =0.1f;
         cd.Reset();
     }
-
+    // TODO: Migrate input to controller and implement events
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        HandleInput();
+
+        if (isPlayerHoldingDownMouse)
         {
             if (cd.isAvailable)
             {
@@ -196,5 +201,11 @@ public class PlayerBasicAttack : MonoBehaviour
             }
         }
 
+    }
+
+    void HandleInput()
+    {
+        if (Input.GetMouseButtonDown(0)) { isPlayerHoldingDownMouse = true; }
+        if (Input.GetMouseButtonUp(0)) { isPlayerHoldingDownMouse = false; }
     }
 }
