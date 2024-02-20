@@ -4,6 +4,8 @@ using System.Linq;
 using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 namespace Christian
 {
     public class AbilityPayload : IPlayerAbilityPayload
@@ -11,6 +13,7 @@ namespace Christian
         public HashSet<EnemyHealth> enemiesInEffect { get; set; }
         public Transform player { get; set; }
         public GameObject Ability1Proj { get; set; }
+        public EventManager em { get; set; }
     }
     public class Abilities : IPlayerAbilities<AbilityPayload>
     {
@@ -95,7 +98,9 @@ namespace Christian
         {
             if (cd.isAvailable)
             {
-                t.player.parent.GetComponent<PlayerEffects>().Add(new AttackSpeedEffect(8, 0.5f));
+                ExecuteEvents.Execute<IGunStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.FIRERATE, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IGunStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.RELOADSPEED, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IGunStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.BLOOM, new EffectFactor(1, 4), new TimeCooldown(8f))));
                 cd.Reset();
             }
         }
@@ -115,7 +120,7 @@ namespace Christian
 
         public void OnActivation(AbilityPayload t)
         {
-            if (currentCharge != maxCharge) { return; }
+            if (currentCharge < maxCharge) { return; }
 
             var enemies = GetRenderedEnemies();
             foreach (var enemy in enemies)

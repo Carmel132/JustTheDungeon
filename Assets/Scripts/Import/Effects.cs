@@ -55,9 +55,10 @@ public class AttackSpeedEffect : IEffect
 {
     public ICooldown duration { get; set; } = new TimeCooldown();
     public float multiplier;
-
-    public AttackSpeedEffect(float d, float m)
+    private WeaponStats stats;
+    public AttackSpeedEffect(float d, float m, ref WeaponStats stats)
     {
+        this.stats = stats;
         duration.duration = d;
         multiplier = m;
     }
@@ -65,12 +66,12 @@ public class AttackSpeedEffect : IEffect
     public void Start(Transform t)
     {
         duration.Reset();
-        t.GetComponent<PlayerBasicAttack>().cd.duration *= multiplier;
+        //t.GetComponent<PlayerBasicAttack>().cd.duration *= multiplier;
     }
 
     public void OnRemove(Transform t)
     {
-        t.GetComponent<PlayerBasicAttack>().cd.duration /= multiplier;
+        //t.GetComponent<PlayerBasicAttack>().cd.duration /= multiplier;
     }
 
     public void Add(Transform t, AttackSpeedEffect effect)

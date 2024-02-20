@@ -6,14 +6,25 @@ using UnityEngine.EventSystems;
 
 public enum EventGroup
 {
-    Player
+    Player, GunStats
 }
 
-public class EventManager : MonoBehaviour, IPlayerMessages
+public class EventManager : MonoBehaviour, IPlayerMessages, IGunStatMessages
 {
 
     private Dictionary<EventGroup, List<GameObject>> register = new Dictionary<EventGroup, List<GameObject>>();
+    
+    public void registerEvent(EventGroup eventGroup, GameObject obj)
+    {
+        if (!register.ContainsKey(eventGroup)){ register.Add(eventGroup, new List<GameObject>()); }
+        register[eventGroup].Add(obj);
+    }
+    public void deregisterEvent(EventGroup eventGroup, GameObject obj)
+    {
+        register[eventGroup].Remove(obj);
+    }
 
+    //IPlayerMessages
     public void OnPlayerMainAttack(Transform player) 
     {
         foreach (var obj in register[EventGroup.Player])
@@ -57,7 +68,6 @@ public class EventManager : MonoBehaviour, IPlayerMessages
             ExecuteEvents.Execute<IPlayerMessages>(obj, null, (x, y) => x.OnPlayerInteract(transform));
         }
     }
-
     public void PlayerChargeUlt(float damage)
     {
         foreach (var obj in register[EventGroup.Player])
@@ -65,14 +75,13 @@ public class EventManager : MonoBehaviour, IPlayerMessages
             ExecuteEvents.Execute<IPlayerMessages>(obj, null, (x, y) => x.PlayerChargeUlt(damage));
         }
     }
-    public void registerEvent(EventGroup eventGroup, GameObject obj)
+   
+    //IGunStatMessages
+    public void AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
-        if (!register.ContainsKey(eventGroup)){ register.Add(eventGroup, new List<GameObject>()); }
-        register[eventGroup].Add(obj);
-    }
-
-    public void deregisterEvent(EventGroup eventGroup, GameObject obj)
-    {
-        register[eventGroup].Remove(obj);
+        foreach (var obj in register[EventGroup.GunStats])
+        {
+            ExecuteEvents.Execute<IGunStatMessages>(obj, null, (x, y) => x.AddStatChange(f));
+        }
     }
 }

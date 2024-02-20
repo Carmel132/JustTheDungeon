@@ -7,7 +7,6 @@ namespace Christian
     {
         public GameObject Ability1Proj;
         public EventManager EM;
-        public GameObject UltObj;
         Abilities ps = new Abilities();
 
         HashSet<EnemyHealth> EnemiesInEffect = new HashSet<EnemyHealth>();
@@ -47,7 +46,7 @@ namespace Christian
         {
             var cap = new AbilityPayload();
             cap.enemiesInEffect = EnemiesInEffect;
-
+            cap.em = EM;
             ps.passive.Update(cap);
             ps.active.Update(cap);
             //ps.ultimate.Update(cap);
@@ -56,7 +55,7 @@ namespace Christian
         void AbilityStart()
         {
             var cap = new AbilityPayload();
-
+            cap.em = EM;
             ps.passive.Start(cap);
             ps.active.Start(cap);
         }
@@ -66,6 +65,7 @@ namespace Christian
             var cap = new AbilityPayload();
             cap.Ability1Proj = Ability1Proj;
             cap.player = transform;
+            cap.em = EM;
 
             ps.active.OnActivation(cap);
         }
