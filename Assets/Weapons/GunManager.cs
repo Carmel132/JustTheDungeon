@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 #nullable enable
@@ -9,15 +5,15 @@ public class EffectFactor
 {
     float m;
     float b;
-    public static float operator*(EffectFactor lhs, float rhs)
+    public static float operator *(EffectFactor lhs, float rhs)
     {
         return lhs.m * rhs + lhs.b;
     }
-    public static float operator/(EffectFactor lhs, float rhs)
+    public static float operator /(EffectFactor lhs, float rhs)
     {
         return (rhs - lhs.b) / lhs.m;
     }
-    public static TimeCooldown operator*(EffectFactor lhs, TimeCooldown rhs)
+    public static TimeCooldown operator *(EffectFactor lhs, TimeCooldown rhs)
     {
         var ret = new TimeCooldown();
         ret.duration = rhs.duration * lhs.m + lhs.b;
@@ -27,7 +23,7 @@ public class EffectFactor
     public static TimeCooldown operator /(EffectFactor lhs, TimeCooldown rhs)
     {
         var ret = new TimeCooldown();
-        ret.duration = (rhs.duration - lhs.b) / lhs.m ;
+        ret.duration = (rhs.duration - lhs.b) / lhs.m;
         ret.Reset();
         return ret;
     }
@@ -69,7 +65,7 @@ public class GunManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IWeapon? get(int idx)

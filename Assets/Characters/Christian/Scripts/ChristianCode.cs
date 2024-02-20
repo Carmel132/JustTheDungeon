@@ -1,8 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -17,7 +14,6 @@ namespace Christian
     }
     public class Abilities : IPlayerAbilities<AbilityPayload>
     {
-        public PlayerStats stats { get; set; } = new PlayerStats(4, 5);
         public IPassiveAbility<AbilityPayload> passive { get; set; } = new Passive();
         public IActiveAbility<AbilityPayload> active { get; set; } = new Active2();
         public IUltimateAbility<AbilityPayload> ultimate { get; set; } = new Ultimate();
@@ -76,19 +72,18 @@ namespace Christian
                 l.maxRadius = maxRadius;
                 l.dR = dR;
                 var h = p.GetComponent<Hitbox>();
-                h.Effects.Add(new StunEffect(stunDuration));
+                //h.Effects.Add(new StunEffect(stunDuration));
                 h.Damage = Damage;
                 cd.Reset();
             }
         }
     }
 
-    //TODO: Add reload speed buff to ability when weapons are implemented
     public class Active2 : IActiveAbility<AbilityPayload>
     {
         public ICooldown cd { get; set; } = new TimeCooldown();
 
-        public void Start(AbilityPayload t) 
+        public void Start(AbilityPayload t)
         {
             cd.duration = 3;
             cd.Reset();
@@ -101,6 +96,8 @@ namespace Christian
                 ExecuteEvents.Execute<IGunStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.FIRERATE, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
                 ExecuteEvents.Execute<IGunStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.RELOADSPEED, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
                 ExecuteEvents.Execute<IGunStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.BLOOM, new EffectFactor(1, 4), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IPlayerStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((PlayerEffectTarget.MAXHP, new EffectFactor(1, 2), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IPlayerStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((PlayerEffectTarget.HP, new EffectFactor(1, 2), new TimeCooldown(8f))));
                 cd.Reset();
             }
         }
@@ -116,7 +113,7 @@ namespace Christian
 
         float Damage = 1000f;
 
-        public static EnemyHealth[] GetRenderedEnemies() => UnityEngine.Object.FindObjectsOfType<EnemyHealth>(false).Where(E => E.GetComponentsInChildren<Renderer>(false).Any(r => r.isVisible) || E.GetComponentsInParent<Renderer>(false).Any(r=>r.isVisible)).ToArray();
+        public static EnemyHealth[] GetRenderedEnemies() => UnityEngine.Object.FindObjectsOfType<EnemyHealth>(false).Where(E => E.GetComponentsInChildren<Renderer>(false).Any(r => r.isVisible) || E.GetComponentsInParent<Renderer>(false).Any(r => r.isVisible)).ToArray();
 
         public void OnActivation(AbilityPayload t)
         {

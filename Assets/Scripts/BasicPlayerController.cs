@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -45,24 +43,9 @@ public interface IPlayerMessages : IEventSystemHandler
     void PlayerChargeUlt(float damage) { }
 }
 
-public class PlayerStats
-{
-    public int Speed { get; set; }
-    public static float SpeedMultiplier = 3 / 2;
-    public int HP { get; set; }
-
-    public PlayerStats(int speed, int hP)
-    {
-        Speed = speed;
-        HP = hP;
-    }
-}
-
-
 // TODO: Create ability information interfaces
 public interface IPlayerAbilities<Payload> where Payload : IPlayerAbilityPayload
 {
-    public PlayerStats stats { get; set; }
     public IPassiveAbility<Payload> passive { get; set; }
     public IActiveAbility<Payload> active { get; set; }
     public IUltimateAbility<Payload> ultimate { get; set; }
@@ -73,13 +56,15 @@ public interface IPlayerAbilityPayload
     public Transform player { get; set; }
 }
 
-public class BasicPlayerController : MonoBehaviour
+public class BasicPlayerController : MonoBehaviour, IPlayerController
 {
-    public PlayerStats ps;
     public EventManager EM;
+    public PlayerEffects stats { get; set; }
 
     private void Start()
     {
+        stats = GetComponent<PlayerEffects>();
+        EM.registerEvent(EventGroup.PlayerStats, gameObject);
     }
 
     private void Update()
@@ -88,17 +73,17 @@ public class BasicPlayerController : MonoBehaviour
         HandleInput();
     }
 
-    void HandleMovement()
+    public void HandleMovement()
     {
         Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        transform.position += (Vector3)movement * ps.Speed * PlayerStats.SpeedMultiplier * Time.deltaTime;
+        transform.position += (Vector3)movement * stats.stats.movementSpeed * PlayerStats.SpeedMultiplier * Time.deltaTime;
         if (movement.magnitude != 0)
         {
             ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerMove(transform));
         }
     }
 
-    void HandleInput()
+    public void HandleInput()
     {
         if (Input.GetMouseButtonDown(1))
         {

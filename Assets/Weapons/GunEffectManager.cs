@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 #nullable enable
 public enum GunEffectManagerTarget
 {
@@ -10,7 +8,7 @@ public enum GunEffectManagerTarget
 
 public class GunEffectManager : MonoBehaviour
 {
-    
+
 
     public WeaponStats stats;
     Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)> effects = new Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)>();
@@ -28,7 +26,7 @@ public class GunEffectManager : MonoBehaviour
         foreach (var effect in temp)
         {
             if (effect.Value.Item3 == null) { continue; }
-            if (effect.Value.Item3.isAvailable)
+            else if (effect.Value.Item3.isAvailable)
             {
                 Remove(effect.Key);
             }
@@ -37,8 +35,9 @@ public class GunEffectManager : MonoBehaviour
 
     public void Add(int id, GunEffectManagerTarget target, EffectFactor f, TimeCooldown? t)
     {
-        t.Reset();
-        effects.Add(id, (target, f, t));
+        t?.Reset();
+        if (effects.ContainsKey(id)) { effects[id] = (target, f, t); }
+        else { effects.Add(id, (target, f, t)); }
         switch (target)
         {
             case GunEffectManagerTarget.RELOADSPEED:
@@ -59,7 +58,7 @@ public class GunEffectManager : MonoBehaviour
         }
     }
 
-    void Remove(int id)
+    public void Remove(int id)
     {
         var f = effects[id];
         switch (f.Item1)

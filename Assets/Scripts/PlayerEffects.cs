@@ -1,39 +1,103 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
-using System.Linq;
+#nullable enable
 
+using EffectDictionary = System.Collections.Generic.Dictionary<int, (PlayerEffectTarget, EffectFactor, TimeCooldown?)>;
+using UnityEngine.EventSystems;
+
+public enum PlayerEffectTarget
+{
+    MOVEMENTSPEED, MAXHP, HP, ROLLSPEED, ROLLCOOLDOWN
+}
+public interface IPlayerStatMessages : IEventSystemHandler
+{
+    void AddStatChange((PlayerEffectTarget, EffectFactor, TimeCooldown?) f) { }
+}
 public class PlayerEffects : MonoBehaviour
 {
-    Dictionary<Type, IEffect> Effects = new Dictionary<Type, IEffect>();
 
-    public void Add(IEffect effect)
+    public PlayerStats stats;
+    EffectDictionary effects;
+    static System.Random rnd = new System.Random();
+
+    public void Add(int id, (PlayerEffectTarget, EffectFactor, TimeCooldown?) t)
     {
-        if (Effects.ContainsKey(effect.GetType()))
+        t.Item3?.Reset();
+        if (effects.ContainsKey(id)) { effects[id] = t; }
+        else { effects.Add(id, t); }
+        switch (t.Item1)
         {
-            Effects[effect.GetType()].Add(transform, effect);   
-        }
-        else
-        {
-            Effects.Add(effect.GetType(), effect);
-            Effects[effect.GetType()].Start(transform);
+            case PlayerEffectTarget.MOVEMENTSPEED:
+                stats.movementSpeed = t.Item2 * stats.movementSpeed;
+                break;
+            case PlayerEffectTarget.MAXHP:
+                stats.maxHP = (int)(t.Item2 * stats.maxHP);
+                break;
+            case PlayerEffectTarget.HP:
+                stats.HP = (int)(t.Item2 * stats.HP);
+                break;
+            case PlayerEffectTarget.ROLLSPEED:
+                stats.rollSpeed = t.Item2 * stats.rollSpeed;
+                break;
+            case PlayerEffectTarget.ROLLCOOLDOWN:
+                stats.rollCooldown = t.Item2 * stats.rollCooldown;
+                break;
         }
     }
 
-    // Start is called before the first frame update
+    public void Remove(int id)
+    {
+        var t = effects[id];
+        switch (t.Item1)
+        {
+            case PlayerEffectTarget.MOVEMENTSPEED:
+                stats.movementSpeed = t.Item2 / stats.movementSpeed;
+                break;
+            case PlayerEffectTarget.MAXHP:
+                stats.maxHP = (int)(t.Item2 / stats.maxHP);
+                break;
+            case PlayerEffectTarget.HP:
+                stats.HP = (int)(t.Item2 / stats.HP);
+                break;
+            case PlayerEffectTarget.ROLLSPEED:
+                stats.rollSpeed = t.Item2 / stats.rollSpeed;
+                break;
+            case PlayerEffectTarget.ROLLCOOLDOWN:
+                stats.rollCooldown = t.Item2 / stats.rollCooldown;
+                break;
+        }
+        effects.Remove(id);
+    }
     void Start()
     {
-        
+        stats = GetComponent<PlayerStats>();
+        effects = new EffectDictionary();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        foreach (var item in Effects.Where(item => item.Value.remove).ToList())
+        var temp = new EffectDictionary();
+        foreach (var effect in temp)
         {
-            item.Value.OnRemove(transform);
-            Effects.Remove(item.Key);
+            if (effect.Value.Item3 == null) { continue; }
+            else if (effect.Value.Item3.isAvailable)
+            {
+                Remove(effect.Key);
+            }
         }
     }
+    public int newId()
+    {
+        int ret;
+        do { ret = rnd.Next(); } while (effects.ContainsKey(ret));
+        return ret;
+    }
+}
+public interface IPlayerController : IPlayerStatMessages
+{
+    public PlayerEffects stats { get; set; }
+    void IPlayerStatMessages.AddStatChange((PlayerEffectTarget, EffectFactor, TimeCooldown?) f)
+    {
+        stats.Add(stats.newId(), f);
+    }
+    public void HandleMovement();
+    public void HandleInput();
 }

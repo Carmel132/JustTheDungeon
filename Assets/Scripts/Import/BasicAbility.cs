@@ -1,13 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-using System;
-using System.Reflection;
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
-
+/*
 [System.AttributeUsage(System.AttributeTargets.Field)]
 public class SerializeProperty : PropertyAttribute
 {
@@ -102,7 +96,7 @@ public class SerializePropertyAttributeDrawer : PropertyDrawer
     }
 
 }
-#endif
+#endif*/
 
 
 public interface ICooldown
@@ -116,7 +110,7 @@ public interface ICooldown
 public class TimeCooldown : ICooldown
 {
     float last;
-    [field:SerializeField]
+    [field: SerializeField]
     public float duration { get; set; }
     public bool isAvailable { get { return (Time.time - last) > duration; } set { isAvailable = value; } }
 
@@ -125,7 +119,7 @@ public class TimeCooldown : ICooldown
         last = Time.time;
     }
 
-    public TimeCooldown(float ?_d =null)
+    public TimeCooldown(float? _d = null)
     {
         if (_d is float) { duration = (float)_d; }
     }
@@ -173,107 +167,4 @@ public class ChargeCooldown : ICooldown
     }
 }
 
-public interface IBasicAbility<T1, T2> : IAbility<T2>
-{
-    void Activate(T1 args);
-    ICooldown cd { get; set; }
-}
-
-public interface IGunBasicAbilityInfo
-{
-    public ICooldown cd { get; set; }
-    public IBasicProjectileInfo proj { get; set; }
-}
-
-public class GunBasicAbilityInfo : IGunBasicAbilityInfo
-{
-    public ICooldown cd { get; set; }
-    public IBasicProjectileInfo proj { get; set; }
-    public GunBasicAbilityInfo(ICooldown _cd, IBasicProjectileInfo _info)
-    {
-        cd = _cd;
-        proj = _info;
-    }
-}
-
-public class GunAbilityInfo : IBasicProjectileInfo
-{
-    public float projSpeed { get; set; }
-    public Vector3 target { get; set; }
-    public GameObject proj { get; set; }
-    public float lifetime { get; set; }
-    public float bloom { get; set; }
-    public Transform parent { get; set; }
-    public Vector3 start { get; set; }
-
-    public GunAbilityInfo(float projSpeed, Vector3 target, Vector3 start, GameObject proj, float lifetime, float bloom, Transform parent)
-    {
-        this.projSpeed = projSpeed;
-        this.target = target;
-        this.proj = proj;
-        this.lifetime = lifetime;
-        this.bloom = bloom;
-        this.parent = parent;
-        this.start = start;
-    }
-}
-
-public interface IBasicProjectileInfo
-{
-    public float projSpeed { get; set; }
-    public Vector3 target { get; set; }
-    public GameObject proj { get; set; }
-    public float lifetime { get; set; }
-    public float bloom { get; set; }
-    public Transform parent { get; set; }
-    public Vector3 start { get; set; }
-}
-
-//keep
-public class BasicProjectile
-{
-    IBasicProjectileInfo info;
-    GameObject proj;
-    public BasicProjectile(IBasicProjectileInfo _info)
-    {
-        info = _info;
-    }
-
-    public void Start()
-    {
-        proj = GameObject.Instantiate(info.proj);
-        proj.transform.position = (Vector2)info.start;
-        proj.transform.SetParent(info.parent);
-        //transform.right = target.position - transform.position;
-        Vector2 dir = Quaternion.Euler(0, 0, UnityEngine.Random.Range(-info.bloom, info.bloom)) * ((Vector2)info.target - (Vector2)proj.transform.position).normalized * info.projSpeed;
-        proj.transform.right = dir - (Vector2)proj.transform.position;
-        proj.GetComponent<Rigidbody2D>().AddForce(dir);
-        GameObject.Destroy(proj, info.lifetime);
-    }
-}
-
-public class GunBasicAbility : IBasicAbility<Vector3, IGunBasicAbilityInfo>
-{
-    public IGunBasicAbilityInfo info;
-    //List<BasicProjectile> bullets = new List<BasicProjectile>();
-    public ICooldown cd { get; set; }
-
-    public void Activate(Vector3 target)
-    {
-        if (cd.isAvailable)
-        {
-            info.proj.target = target;
-            var p = new BasicProjectile(info.proj);
-            //bullets.Add(p);
-            p.Start();
-            cd.Reset();
-        }
-    }
-    public void Start(IGunBasicAbilityInfo proj)
-    {
-        info = proj;
-        cd = info.cd;
-        //cd.Reset();
-    }
-}
 

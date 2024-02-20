@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace Christian
@@ -7,13 +6,13 @@ namespace Christian
     {
         public GameObject Ability1Proj;
         public EventManager EM;
+
         Abilities ps = new Abilities();
 
         HashSet<EnemyHealth> EnemiesInEffect = new HashSet<EnemyHealth>();
         // Start is called before the first frame update
         void Start()
         {
-            transform.parent.GetComponent<BasicPlayerController>().ps = ps.stats;
 
             AbilityStart();
             EM.registerEvent(EventGroup.Player, gameObject);
@@ -23,6 +22,7 @@ namespace Christian
         void Update()
         {
             AbilityUpdate();
+            UltChargeRateUpdate();
         }
 
         void OnTriggerEnter2D(Collider2D collision)
@@ -79,6 +79,12 @@ namespace Christian
         {
             var cap = new AbilityPayload();
             ps.ultimate.OnActivation(cap);
+        }
+
+        void UltChargeRateUpdate()
+        {
+            var t = transform.parent.gameObject.GetComponent<PlayerStats>();
+            ps.ultimate.chargeRate = 1 + (t.HP <= t.maxHP / 2 ? 1 : 0);
         }
     }
 }

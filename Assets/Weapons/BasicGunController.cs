@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-//TODO: Add gun controller effect manager
-
 
 // Vector3 for target
 public class BasicGunController : MonoBehaviour, IWeapon
-{ 
+{
     public GameObject proj;
     //TODO: Add 'lifetime' property to projectile controller
     public float lifetime;
