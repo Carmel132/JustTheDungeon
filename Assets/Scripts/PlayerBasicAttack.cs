@@ -25,7 +25,7 @@ public class PlayerBasicAttack : MonoBehaviour
     {
         HandleInput();
 
-        if (isPlayerHoldingDownMouse)
+        if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
         {
             ability.OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }

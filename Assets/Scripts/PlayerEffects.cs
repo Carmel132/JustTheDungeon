@@ -91,7 +91,7 @@ public class PlayerEffects : MonoBehaviour
         return ret;
     }
 }
-public interface IPlayerController : IPlayerStatMessages
+public interface IPlayerController : IPlayerStatMessages, IPlayerRollable
 {
     public PlayerEffects stats { get; set; }
     void IPlayerStatMessages.AddStatChange((PlayerEffectTarget, EffectFactor, TimeCooldown?) f)

@@ -56,10 +56,23 @@ public interface IPlayerAbilityPayload
     public Transform player { get; set; }
 }
 
+
+public interface IPlayerRollable
+{
+    public bool isRolling { get;set; }
+    public TimeCooldown rollDuration { get; set; }
+}
+
 public class BasicPlayerController : MonoBehaviour, IPlayerController
 {
     public EventManager EM;
     public PlayerEffects stats { get; set; }
+    [field: SerializeField]
+    public bool isRolling { get; set; } = false;
+    [field: SerializeField]
+    public TimeCooldown rollDuration { get; set; }
+
+    Vector2 rollDirection = Vector2.zero;
 
     private void Start()
     {
@@ -75,23 +88,53 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
 
     public void HandleMovement()
     {
-        Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        transform.position += (Vector3)movement * stats.stats.movementSpeed * PlayerStats.SpeedMultiplier * Time.deltaTime;
-        if (movement.magnitude != 0)
+        if (!isRolling)
         {
-            ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerMove(transform));
+            Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            transform.position += (Vector3)movement * stats.stats.movementSpeed * PlayerStats.SpeedMultiplier * Time.deltaTime;
+            if (movement.magnitude != 0)
+            {
+                ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerMove(transform));
+            }
         }
+        else
+        {
+            transform.position += (Vector3)rollDirection * stats.stats.rollSpeed * PlayerStats.SpeedMultiplier * Time.deltaTime;
+            ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerRoll(transform));
+            if (rollDuration.isAvailable) 
+            { 
+                isRolling = false;
+                stats.stats.rollCooldown.Reset();
+                GetComponent<Collider2D>().enabled = true;
+                //just to see invincibility frames
+                GetComponent<SpriteRenderer>().color = Color.white;
+            }
+        }
+        
     }
 
     public void HandleInput()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !isRolling)
         {
             ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerActiveAbility(transform));
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isRolling)
         {
             ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerUltimateAbility(transform));
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && stats.stats.rollCooldown.isAvailable && !isRolling)
+        {
+            rollDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            if (rollDirection.magnitude != 0)
+            {
+                isRolling = true;
+                rollDuration.Reset();
+                GetComponent<Collider2D>().enabled = false;
+                //just to see invincibility frames
+                GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            
         }
     }
 }
