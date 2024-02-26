@@ -72,6 +72,13 @@ public class EventManager : MonoBehaviour, IPlayerMessages, IGunStatMessages, IP
             ExecuteEvents.Execute<IPlayerMessages>(obj, null, (x, y) => x.OnPlayerInteract(transform));
         }
     }
+    public void OnPlayerKill(Transform player, Transform enemy)
+    {
+        foreach (var obj in register[EventGroup.Player])
+        {
+            ExecuteEvents.Execute<IPlayerMessages>(obj, null, (x, y) => x.OnPlayerKill(player, enemy));
+        }
+    }
     public void PlayerChargeUlt(float damage)
     {
         foreach (var obj in register[EventGroup.Player])
