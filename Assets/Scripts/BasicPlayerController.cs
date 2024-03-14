@@ -75,7 +75,7 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
     [field: SerializeField]
     public TimeCooldown rollDuration { get; set; }
     public Animator animator;
-
+    public bool canMove = true;
     Vector2 rollDirection = Vector2.zero;
 
     private void Start()
@@ -95,7 +95,7 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
 
     public void HandleMovement()
     {
-        if (!isRolling)
+        if (!isRolling && canMove)
         {
             Vector2 movement = new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             transform.position += PlayerStats.SpeedMultiplier * stats.stats.movementSpeed * Time.deltaTime * (Vector3)movement;

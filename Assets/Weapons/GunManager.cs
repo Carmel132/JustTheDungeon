@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 #nullable enable
@@ -53,32 +55,54 @@ public interface IWeapon : IAbility<Vector3>, IGunStatMessages
 
 public class GunManager : MonoBehaviour
 {
-    public (IWeapon?, IWeapon?, IWeapon?) weapons = (null, null, null);
+    public List<IWeapon> weapons;
     int current = 0;
+    public bool locked = false;
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        weapons = new();
+        for (int i = 0; i < transform.childCount; ++i)
+        {
+            if (Util.GetComponentThatImplements<IWeapon>(transform.GetChild(i).gameObject) is IWeapon w)
+            {
+                weapons.Add(w);
+            }
+        }
     }
-
-    // Update is called once per frame
     void Update()
     {
-
+        DisableNonCurrent();
     }
-
-    IWeapon? get(int idx)
+    void DisableNonCurrent()
     {
-        switch (idx)
+        for (int i = 0; i < weapons.Count; ++i)
         {
-            case 0:
-                return weapons.Item1;
-            case 1:
-                return weapons.Item2;
-            case 2:
-                return weapons.Item3;
+            weapons[i].stats.gameObject.SetActive(i == current);
         }
-        return null;
+    }
+    public void LastWeapon()
+    {
+        if (locked) return;
+        current = weapons.Count - 1;
+    }
+    public void FirstWeapon()
+    {
+        if (locked) return;
+        current = 0;
+    }
+    public void NextWeapon()
+    {
+        if (locked) return;
+        current = (current + 1) % weapons.Count;
+    }
+    public void PrevWeapon()
+    {
+        if (locked) return;
+        current = (current == 0 ? weapons.Count : current) - 1;
+    }
+    public IWeapon? Current()
+    {
+        return weapons[current];
     }
 }
