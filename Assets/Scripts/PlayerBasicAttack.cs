@@ -12,12 +12,13 @@ public class PlayerBasicAttack : MonoBehaviour
     public Transform start;
     IBasicAbility<Vector3, IGunBasicAbilityInfo> ability = new GunBasicAbility();*/
     public IAbility<Vector3> ability;
-
+    GunManager gunManager;
     bool isPlayerHoldingDownMouse = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        gunManager = GetComponentInChildren<GunManager>();
     }
     // TODO: Migrate input to controller and implement events
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class PlayerBasicAttack : MonoBehaviour
 
         if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
         {
-            ability.OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
 
     }
@@ -36,5 +37,14 @@ public class PlayerBasicAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) { isPlayerHoldingDownMouse = true; }
         if (Input.GetMouseButtonUp(0)) { isPlayerHoldingDownMouse = false; }
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            gunManager.NextWeapon();
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            gunManager.PrevWeapon();
+        }
     }
 }

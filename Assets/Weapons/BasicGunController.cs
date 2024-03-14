@@ -27,6 +27,7 @@ public class BasicGunController : MonoBehaviour, IWeapon
     // Start is called before the first frame update
     void Start()
     {
+        em = Util.GetEventManager();
         transform.parent.parent.GetComponent<PlayerBasicAttack>().ability = this;
         stats = GetComponent<GunEffectManager>();
         em.registerEvent(EventGroup.GunStats, gameObject);
