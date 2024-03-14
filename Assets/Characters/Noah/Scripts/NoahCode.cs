@@ -57,7 +57,7 @@ namespace Noah
 
         public void Update(AbilityPayload payload)
         {
-            if (isActive && duration.isAvailable)
+            if (isActive && (duration.isAvailable || gun.GetComponent<BasicAmmoManager>().Current == 0))
             {
                 isActive = false;
                 payload.gunManager.locked = false;
