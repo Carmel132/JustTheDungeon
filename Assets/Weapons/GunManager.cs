@@ -46,7 +46,8 @@ public interface IWeapon : IAbility<Vector3>, IGunStatMessages
 {
     //IAbility<Vector3>.OnActivation(Vector3 payload) == OnFire()
     GunEffectManager stats { get; set; }
-    void Reload(in object payload) { }
+    //BasicAmmoManager ammo { get; set; }
+    void Reload(in object? payload) { }
     void IGunStatMessages.AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
         stats.Add(stats.newId(), f.Item1, f.Item2, f.Item3);

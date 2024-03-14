@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 484536347}
   - component: {fileID: 484536348}
   - component: {fileID: 484536349}
+  - component: {fileID: 484536350}
   m_Layer: 0
   m_Name: Basic Gun
   m_TagString: Untagged
@@ -262,11 +263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d543b04570d1a94d90be87b74aa430f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proj: {fileID: 368071464638043534, guid: 7c83675d29d6c7a479fc6d4d7f8a236f, type: 3}
+  projectile: {fileID: 368071464638043534, guid: 7c83675d29d6c7a479fc6d4d7f8a236f, type: 3}
   lifetime: 5
   parent: {fileID: 1870436074}
   start: {fileID: 997148459}
   em: {fileID: 819050331}
+  ammo: {fileID: 0}
 --- !u!114 &484536348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +301,22 @@ MonoBehaviour:
   damage: 1
   speed: 1000
   bloom: 1
+--- !u!114 &484536350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484536345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56801d651bf375b40ae6a28895daa962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLoadedBullets: 10
+  bulletsCarried: 200
+  magSize: 10
+  decrement: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1455,7 @@ GameObject:
   - component: {fileID: 4601486693893125257}
   - component: {fileID: 4601486693893125256}
   - component: {fileID: 7153746885491133360}
+  - component: {fileID: 7153746885491133361}
   m_Layer: 0
   m_Name: Noah Ability Gun
   m_TagString: Untagged
@@ -1473,8 +1492,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d543b04570d1a94d90be87b74aa430f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proj: {fileID: 368071464638043534, guid: 7c83675d29d6c7a479fc6d4d7f8a236f, type: 3}
+  projectile: {fileID: 368071464638043534, guid: 7c83675d29d6c7a479fc6d4d7f8a236f, type: 3}
   lifetime: 5
   parent: {fileID: 1870436074}
   start: {fileID: 4601486693346935742}
   em: {fileID: 0}
+  ammo: {fileID: 0}
+--- !u!114 &7153746885491133361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4601486693893125260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56801d651bf375b40ae6a28895daa962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLoadedBullets: 1000
+  bulletsCarried: 0
+  magSize: 1000
+  decrement: 1

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5370332921600609392}
   - component: {fileID: 5370332921600609393}
   - component: {fileID: 1593065293104100169}
+  - component: {fileID: 8519396531318067040}
   m_Layer: 0
   m_Name: Noah Ability Gun
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MonoBehaviour:
   reloadSpeed:
     <duration>k__BackingField: 5
   fireRate:
-    <duration>k__BackingField: 0.12
+    <duration>k__BackingField: 0.06
   damage: 10
   speed: 1000
   bloom: 5
@@ -80,11 +81,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d543b04570d1a94d90be87b74aa430f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proj: {fileID: 368071464638043534, guid: 7c83675d29d6c7a479fc6d4d7f8a236f, type: 3}
+  projectile: {fileID: 368071464638043534, guid: 7c83675d29d6c7a479fc6d4d7f8a236f, type: 3}
   lifetime: 5
   parent: {fileID: 0}
   start: {fileID: 5370332922078903111}
   em: {fileID: 0}
+  ammo: {fileID: 0}
+--- !u!114 &8519396531318067040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370332921600609397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56801d651bf375b40ae6a28895daa962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLoadedBullets: 200
+  bulletsCarried: 0
+  magSize: 200
+  decrement: 1
 --- !u!1 &5370332922078903110
 GameObject:
   m_ObjectHideFlags: 0
