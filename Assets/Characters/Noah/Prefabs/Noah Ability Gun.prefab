@@ -69,6 +69,7 @@ MonoBehaviour:
   damage: 10
   speed: 1000
   bloom: 5
+  reloadable: 0
 --- !u!114 &1593065293104100169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +87,6 @@ MonoBehaviour:
   parent: {fileID: 0}
   start: {fileID: 5370332922078903111}
   em: {fileID: 0}
-  ammo: {fileID: 0}
 --- !u!114 &8519396531318067040
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
-using System.Drawing;
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 #nullable enable
 
 // Vector3 for target
@@ -11,18 +12,17 @@ public class BasicGunController : MonoBehaviour, IWeapon
     public Transform parent;
     public Transform start;
     public EventManager em;
-    public BasicAmmoManager ammo;
+    public BasicAmmoManager ammo { get; set; }
     public GunEffectManager stats { get; set; }
-
     public void OnActivation(Vector3 target)
     {
         if (!stats.stats.fireRate.isAvailable) { return; }
-        if (!stats.stats.reloadSpeed.isAvailable || ammo.Current <= 0) { Reload(null); return; }
+        if (!stats.stats.reloadSpeed.isAvailable || ammo.Current <= 0) { ExecuteEvents.Execute<IWeaponMessages>(em.gameObject, null, (x, y) => x.Reload(null)); return; }
 
         GameObject newProjectile = GameObject.Instantiate(projectile);
         newProjectile.transform.position = start.position;
         newProjectile.transform.SetParent(parent);
-        Vector2 dir = Quaternion.Euler(0, 0, Random.Range(-stats.stats.bloom, stats.stats.bloom)) * ((Vector2)target - (Vector2)newProjectile.transform.position).normalized * stats.stats.speed;
+        Vector2 dir = Quaternion.Euler(0, 0, UnityEngine.Random.Range(-stats.stats.bloom, stats.stats.bloom)) * ((Vector2)target - (Vector2)newProjectile.transform.position).normalized * stats.stats.speed;
         newProjectile.transform.right = dir - (Vector2)newProjectile.transform.position;
         newProjectile.GetComponent<Rigidbody2D>().AddForce(dir);
         Destroy(newProjectile, lifetime);
@@ -36,16 +36,7 @@ public class BasicGunController : MonoBehaviour, IWeapon
         em = Util.GetEventManager();
         transform.parent.parent.GetComponent<PlayerBasicAttack>().ability = this;
         stats = GetComponent<GunEffectManager>();
-        em.registerEvent(EventGroup.GunStats, gameObject);
+        em.registerEvent(EventGroup.Weapon, gameObject);
         ammo = GetComponent<BasicAmmoManager>();
-    }
-
-    public void Reload(in object? payload) 
-    {
-        if (stats.stats.reloadSpeed.isAvailable)
-        {
-            stats.stats.reloadSpeed.Reset();
-            ammo.Reload();
-        }
     }
 }

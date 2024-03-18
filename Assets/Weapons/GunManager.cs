@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -37,20 +38,29 @@ public class EffectFactor
     }
 }
 
-public interface IGunStatMessages : IEventSystemHandler
+public interface IWeaponMessages : IEventSystemHandler
 {
     void AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f) { }
+    void Reload(object? payload) { }
 }
 
-public interface IWeapon : IAbility<Vector3>, IGunStatMessages
+public interface IWeapon : IAbility<Vector3>, IWeaponMessages
 {
     //IAbility<Vector3>.OnActivation(Vector3 payload) == OnFire()
     GunEffectManager stats { get; set; }
-    //BasicAmmoManager ammo { get; set; }
-    void Reload(in object? payload) { }
-    void IGunStatMessages.AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
+    BasicAmmoManager ammo { get; set; }
+    void IWeaponMessages.AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
         stats.Add(stats.newId(), f.Item1, f.Item2, f.Item3);
+    }
+
+    void IWeaponMessages.Reload(object? payload)
+    {
+        if (stats.stats.reloadSpeed.isAvailable && stats.stats.reloadable)
+        {
+            stats.stats.reloadSpeed.Reset();
+            ammo.Reload();
+        }
     }
 }
 

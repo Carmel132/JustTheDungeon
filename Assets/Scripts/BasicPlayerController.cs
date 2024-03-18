@@ -145,6 +145,10 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
                 GetComponent<SpriteRenderer>().color = Color.red;
             }
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ExecuteEvents.Execute<IWeaponMessages>(EM.gameObject, null, (x, y) => x.Reload(null));
+        }
     }
 
     public void StartRollAnimation()

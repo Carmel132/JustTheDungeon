@@ -40,6 +40,5 @@ public class BasicAmmoManager : MonoBehaviour
     public void OnActivation()
     {
         currentLoadedBullets = Mathf.Max(currentLoadedBullets - decrement, 0);
-        Debug.Log(currentLoadedBullets);
     }
 }

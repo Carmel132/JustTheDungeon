@@ -1,13 +1,14 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 #nullable enable
 public enum EventGroup
 {
-    Player, PlayerStats, GunStats
+    Player, PlayerStats, Weapon
 }
 
-public class EventManager : MonoBehaviour, IPlayerMessages, IGunStatMessages, IPlayerStatMessages
+public class EventManager : MonoBehaviour, IPlayerMessages, IWeaponMessages, IPlayerStatMessages
 {
 
     private Dictionary<EventGroup, List<GameObject>> register = new Dictionary<EventGroup, List<GameObject>>();
@@ -87,12 +88,20 @@ public class EventManager : MonoBehaviour, IPlayerMessages, IGunStatMessages, IP
         }
     }
 
-    //IGunStatMessages
+    //IWeaponMessages
     public void AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
-        foreach (var obj in register[EventGroup.GunStats])
+        foreach (var obj in register[EventGroup.Weapon])
         {
-            ExecuteEvents.Execute<IGunStatMessages>(obj, null, (x, y) => x.AddStatChange(f));
+            ExecuteEvents.Execute<IWeaponMessages>(obj, null, (x, y) => x.AddStatChange(f));
+        }
+    }
+
+    public void Reload(object? payload)
+    {
+        foreach (var obj in register[EventGroup.Weapon])
+        {
+            ExecuteEvents.Execute<IWeaponMessages>(obj, null, (x, y) => x.Reload(payload));
         }
     }
 
