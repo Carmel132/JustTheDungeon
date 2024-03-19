@@ -53,5 +53,11 @@ namespace Noah {
             cap.gunManager = transform.parent.GetChild(0).gameObject.GetComponent<GunManager>();
             ps.active.Update(cap);
         }
+
+        public void ActiveStart()
+        {
+            AbilityPayload cap = new();
+            ps.active.Start(cap);
+        }
     }
 }

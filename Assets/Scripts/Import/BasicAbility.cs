@@ -120,6 +120,11 @@ public class TimeCooldown : ICooldown
         last = Time.time;
     }
 
+    public void Finish()
+    {
+        last += duration;
+    }
+
     public TimeCooldown(float? _d = null)
     {
         if (_d is float) { duration = (float)_d; }
