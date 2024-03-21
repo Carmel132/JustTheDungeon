@@ -61,7 +61,7 @@ public interface IWeapon : IAbility<Vector3>, IWeaponMessages
         if (stats.stats.reloadSpeed.isAvailable && stats.stats.reloadable && ammo.isReloadable)
         {
             stats.stats.reloadSpeed.Reset();
-            ammo.Reload();
+            //ammo.Reload();
         }
     }
 }
@@ -71,8 +71,9 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     public List<IWeapon> weapons;
     int current = 0;
     public bool locked = false;
-    public Animator ReloadIndicator;
 
+    public Animator ReloadIndicator;
+    public TimeCooldown cd = new(0);
     void Start()
     {
         weapons = new();
@@ -89,6 +90,11 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     void Update()
     {
         DisableNonCurrent();
+
+        if (ReloadIndicator.GetBool("isReloading") && cd.isAvailable)
+        {
+            StopReloadIndicator();
+        }
     }
     void DisableNonCurrent()
     {
@@ -124,16 +130,27 @@ public class GunManager : MonoBehaviour, IWeaponMessages
 
     public void Reload(object? payload)
     {   
-            Debug.Log(1);
-            ReloadIndicator.SetBool("isReloading", true);
-            float reloadDuration = Current().stats.stats.reloadSpeed.duration;
-            ReloadIndicator.SetFloat("SpeedMultiplier", reloadDuration);
+        Debug.Log(1);
+        ReloadIndicator.SetBool("isReloading", true);
+        float reloadDuration = Current().stats.stats.reloadSpeed.duration;
+        ReloadIndicator.SetFloat("SpeedMultiplier", 1f/(reloadDuration));
 
-            Invoke("StopReloadIndicator", reloadDuration);
+        cd.duration = reloadDuration;
+        cd.Reset();
     }
 
     void StopReloadIndicator()
     {
+        if (ReloadIndicator.GetBool("isReloading"))
+        {
+            ReloadIndicator.SetBool("isReloading", false);
+            Current().ammo.Reload();
+        }
+    }
+
+    public void InterruptReload()
+    {
         ReloadIndicator.SetBool("isReloading", false);
     }
+    //TODO: Interrupt reload on ability activation
 }

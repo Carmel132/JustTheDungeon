@@ -10,7 +10,6 @@ namespace Noah {
         int currentKillCount = 0;
         public GameObject ability1Gun;
         
-
         // Start is called before the first frame update
         void Start()
         {

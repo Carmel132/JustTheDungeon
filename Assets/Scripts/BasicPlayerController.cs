@@ -139,9 +139,10 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
                 GetComponent<Collider2D>().enabled = false;
                 //just to see invincibility frames
                 GetComponent<SpriteRenderer>().color = Color.red;
+                transform.GetChild(0).GetComponent<GunManager>().InterruptReload();
             }
         }
-        if (Input.GetKeyDown(KeyCode.R)) // TODO: Check reload availability before sending message
+        if (Input.GetKeyDown(KeyCode.R))
         {
             IWeapon weapon = transform.GetChild(0).GetComponent<GunManager>().Current();
             if (weapon.stats.stats.reloadSpeed.isAvailable && weapon.stats.stats.reloadable && weapon.ammo.isReloadable)
