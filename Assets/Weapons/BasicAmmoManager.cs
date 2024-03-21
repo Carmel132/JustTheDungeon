@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BasicAmmoManager : MonoBehaviour
@@ -36,6 +38,9 @@ public class BasicAmmoManager : MonoBehaviour
         currentLoadedBullets += bulletsLoadedFromCarried;
         bulletsCarried -= bulletsLoadedFromCarried;
     }
+
+    public bool isReloadable { get { return bulletsCarried > 0 && magSize - currentLoadedBullets > 0; } }
+
 
     public void OnActivation()
     {

@@ -1,0 +1,1477 @@
+fileFormatVersion: 2
+guid: cebf8d17477a7924082c2a15d7ead539
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f981c4b9241974981b47bc0a570d42
+      internalID: -2058980921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c092402b54e89e4bbda1273d1785412
+      internalID: 1982880340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c7c6c1426fc164c8a4a5adc55b84ab
+      internalID: 1800122850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb4b4c0afea2524481b099b36fa7c9f
+      internalID: 1529112655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7edee1739aa2c541a8e532fa5192437
+      internalID: -567180905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89d5d892c325da46af4b946498a05e8
+      internalID: -1286010217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a530f080713b73648b2aa2d8cd5e3ea1
+      internalID: -965098759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c7811e3f89c404695644da26c9c68e
+      internalID: -1598464007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed1be10d7e325443a6d0012daa78f57
+      internalID: -1329345926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e4f3ec510f9254ea907e84ef9c36f6
+      internalID: -1889464103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc51322d6ad3bd94d81219b5d3443f5b
+      internalID: -908490175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982b2a8915feb554da76b8a00ab62265
+      internalID: -1493362427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbc56b8282b866498d7bce70b06aca2
+      internalID: -1206354129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c959a91fce2e544b734dea7af4faa3
+      internalID: 1311258437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39c1098d52a5494290def8e3d0c9315
+      internalID: 1064431760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6166636547280c64693871a9eb94725a
+      internalID: -2037962022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40fe2e9c976bb044b1924e3c8fae22f
+      internalID: 1208263309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a6f567284019843a32e72fbbcabb0d
+      internalID: -2076607368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0156d048f8437340a31b4f2f3f4d5e0
+      internalID: 1285513232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67298b97bf9cc8245b0cea1f6d9cc7c5
+      internalID: -759671246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37540344621847429042b803f39d906
+      internalID: -1494766890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9649e3fa96b83742b35f417ada4a998
+      internalID: 1089176604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 2846
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3313ca7a23beac648b5dc527c5fc1f56
+      internalID: -1181027623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_23
+      rect:
+        serializedVersion: 2
+        x: 2974
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648d98f623c488e4abd35529b24c8b96
+      internalID: 245413269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_24
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d1f7f166d40ec4697f059e2e237167
+      internalID: -367978400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_25
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d31d0198fe467a4a9e973852813e205
+      internalID: 1010879090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_26
+      rect:
+        serializedVersion: 2
+        x: 3358
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac6f73c946791b4aa4e15a0dbdfb2ba
+      internalID: 364265738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_27
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691ed98f211b12743bb8528e51cf7752
+      internalID: 481411446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_28
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873e2cde5fb2e4648aa111d696cac672
+      internalID: 1596796484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_29
+      rect:
+        serializedVersion: 2
+        x: 3742
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc938001e3f5b0c449d8b29d56418b4e
+      internalID: -855581108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_30
+      rect:
+        serializedVersion: 2
+        x: 3870
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31081458ed357b84bbead7e9cb733be2
+      internalID: -274169750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_31
+      rect:
+        serializedVersion: 2
+        x: 3998
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a57e1d537e580d42a46648b1fa7fb31
+      internalID: 448981823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_32
+      rect:
+        serializedVersion: 2
+        x: 4126
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90288ea4179a46b4ba0c2339acc5cffd
+      internalID: 1533794009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_33
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a3457baa35c7340a04938d18cc5791
+      internalID: 967571856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_34
+      rect:
+        serializedVersion: 2
+        x: 4382
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0eda2204a97c594fa018f51e7926446
+      internalID: -1305508107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_35
+      rect:
+        serializedVersion: 2
+        x: 4510
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bde569e62295104da172e7860336c7d
+      internalID: 959429700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_36
+      rect:
+        serializedVersion: 2
+        x: 4638
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f210da70cf722c243853e57ead5552ed
+      internalID: -231917686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_37
+      rect:
+        serializedVersion: 2
+        x: 4766
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6857b2066dbe52544a3e4a3c04d7a2a3
+      internalID: 932168108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_38
+      rect:
+        serializedVersion: 2
+        x: 4894
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b78352765a2104f8e5b9d9e12054c5
+      internalID: -2131914719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_39
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242af03f1feb3cf4dac17a4b59ae2103
+      internalID: -2049627633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_40
+      rect:
+        serializedVersion: 2
+        x: 5150
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8c31a064eee6848bcebacf364c82c0
+      internalID: -1766834636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_41
+      rect:
+        serializedVersion: 2
+        x: 5278
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a137bd24ad908254c9845ebffd1b304e
+      internalID: 1272109627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_42
+      rect:
+        serializedVersion: 2
+        x: 5406
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c520f244d9bebd74393bd7d0b1206adc
+      internalID: 1974646157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_43
+      rect:
+        serializedVersion: 2
+        x: 5534
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c11ea8097fc43428b41cb3e969f2b2
+      internalID: 620726304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_44
+      rect:
+        serializedVersion: 2
+        x: 5662
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a09cff1f1da10f4e93084c516a4085d
+      internalID: -1445193560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_45
+      rect:
+        serializedVersion: 2
+        x: 5790
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99730c8cabc8f7e46ae24da908cea323
+      internalID: 1477753809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_46
+      rect:
+        serializedVersion: 2
+        x: 5918
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff7c7d3a3eccca4a80c506ef819845f
+      internalID: 1428628672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_47
+      rect:
+        serializedVersion: 2
+        x: 6046
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac5d625197c94342b43030aed0d0f6c
+      internalID: -1476297561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_48
+      rect:
+        serializedVersion: 2
+        x: 6174
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925aa72dccbf6cb4294b9f98e076d335
+      internalID: -402914267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_49
+      rect:
+        serializedVersion: 2
+        x: 6302
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7873f8642909a9a458757c9b8efaa420
+      internalID: -664874600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_50
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f1a5cfea385fb49bde3cb7b81399fe
+      internalID: 1827937491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_51
+      rect:
+        serializedVersion: 2
+        x: 6558
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5e317d789d5c748a292bc7835ecf6a
+      internalID: 1831650417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_52
+      rect:
+        serializedVersion: 2
+        x: 6686
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170025c03fccefb4cad58af5eba85b4d
+      internalID: 416955308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_53
+      rect:
+        serializedVersion: 2
+        x: 6814
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cdd0cc2bf92ce4ba9fff7a0cf39951
+      internalID: 233148303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_54
+      rect:
+        serializedVersion: 2
+        x: 6942
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fd24479c4de5d40b7022d88cacb91b
+      internalID: 1034419036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_55
+      rect:
+        serializedVersion: 2
+        x: 7070
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb36a88d3314ec54c9904ec52d2dda23
+      internalID: 1243246203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_56
+      rect:
+        serializedVersion: 2
+        x: 7198
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9ed7b7cf14a97419f5a49c1587093e
+      internalID: -277283834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_57
+      rect:
+        serializedVersion: 2
+        x: 7326
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ce112e8a98ac446b0b6ed2075b28aa
+      internalID: -977638401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_58
+      rect:
+        serializedVersion: 2
+        x: 7454
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b560a4cadb44d784988bf18b358b9f69
+      internalID: 1754229700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_59
+      rect:
+        serializedVersion: 2
+        x: 7582
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d815a6e6e9a820a4a980150454e001f8
+      internalID: 514440280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReloadUIAnimation-Sheet 1_60
+      rect:
+        serializedVersion: 2
+        x: 7710
+        y: 60
+        width: 69
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ff994b9c44f5b4d9df065c7de80b33
+      internalID: 336775364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ReloadUIAnimation-Sheet 1_44: -1445193560
+      ReloadUIAnimation-Sheet 1_49: -664874600
+      ReloadUIAnimation-Sheet 1_25: 1010879090
+      ReloadUIAnimation-Sheet 1_30: -274169750
+      ReloadUIAnimation-Sheet 1_46: 1428628672
+      ReloadUIAnimation-Sheet 1_45: 1477753809
+      ReloadUIAnimation-Sheet 1_13: 1311258437
+      ReloadUIAnimation-Sheet 1_35: 959429700
+      ReloadUIAnimation-Sheet 1_47: -1476297561
+      ReloadUIAnimation-Sheet 1_54: 1034419036
+      ReloadUIAnimation-Sheet 1_37: 932168108
+      ReloadUIAnimation-Sheet 1_40: -1766834636
+      ReloadUIAnimation-Sheet 1_16: 1208263309
+      ReloadUIAnimation-Sheet 1_5: -1286010217
+      ReloadUIAnimation-Sheet 1_32: 1533794009
+      ReloadUIAnimation-Sheet 1_28: 1596796484
+      ReloadUIAnimation-Sheet 1_52: 416955308
+      ReloadUIAnimation-Sheet 1_27: 481411446
+      ReloadUIAnimation-Sheet 1_4: -567180905
+      ReloadUIAnimation-Sheet 1_26: 364265738
+      ReloadUIAnimation-Sheet 1_34: -1305508107
+      ReloadUIAnimation-Sheet 1_0: -2058980921
+      ReloadUIAnimation-Sheet 1_57: -977638401
+      ReloadUIAnimation-Sheet 1_39: -2049627633
+      ReloadUIAnimation-Sheet 1_17: -2076607368
+      ReloadUIAnimation-Sheet 1_33: 967571856
+      ReloadUIAnimation-Sheet 1_36: -231917686
+      ReloadUIAnimation-Sheet 1_7: -1598464007
+      ReloadUIAnimation-Sheet 1_38: -2131914719
+      ReloadUIAnimation-Sheet 1_60: 336775364
+      ReloadUIAnimation-Sheet 1_51: 1831650417
+      ReloadUIAnimation-Sheet 1_58: 1754229700
+      ReloadUIAnimation-Sheet 1_50: 1827937491
+      ReloadUIAnimation-Sheet 1_22: -1181027623
+      ReloadUIAnimation-Sheet 1_24: -367978400
+      ReloadUIAnimation-Sheet 1_31: 448981823
+      ReloadUIAnimation-Sheet 1_20: -1494766890
+      ReloadUIAnimation-Sheet 1_43: 620726304
+      ReloadUIAnimation-Sheet 1_12: -1206354129
+      ReloadUIAnimation-Sheet 1_6: -965098759
+      ReloadUIAnimation-Sheet 1_8: -1329345926
+      ReloadUIAnimation-Sheet 1_14: 1064431760
+      ReloadUIAnimation-Sheet 1_2: 1800122850
+      ReloadUIAnimation-Sheet 1_59: 514440280
+      ReloadUIAnimation-Sheet 1_1: 1982880340
+      ReloadUIAnimation-Sheet 1_18: 1285513232
+      ReloadUIAnimation-Sheet 1_21: 1089176604
+      ReloadUIAnimation-Sheet 1_11: -1493362427
+      ReloadUIAnimation-Sheet 1_48: -402914267
+      ReloadUIAnimation-Sheet 1_23: 245413269
+      ReloadUIAnimation-Sheet 1_29: -855581108
+      ReloadUIAnimation-Sheet 1_42: 1974646157
+      ReloadUIAnimation-Sheet 1_9: -1889464103
+      ReloadUIAnimation-Sheet 1_56: -277283834
+      ReloadUIAnimation-Sheet 1_19: -759671246
+      ReloadUIAnimation-Sheet 1_55: 1243246203
+      ReloadUIAnimation-Sheet 1_53: 233148303
+      ReloadUIAnimation-Sheet 1_15: -2037962022
+      ReloadUIAnimation-Sheet 1_10: -908490175
+      ReloadUIAnimation-Sheet 1_3: 1529112655
+      ReloadUIAnimation-Sheet 1_41: 1272109627
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

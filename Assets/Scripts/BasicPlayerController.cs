@@ -74,7 +74,6 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
     public bool isRolling { get; set; } = false;
     [field: SerializeField]
     public TimeCooldown rollDuration { get; set; }
-    public Animator animator;
     public bool canMove = true;
     Vector2 rollDirection = Vector2.zero;
 
@@ -84,7 +83,6 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
 
         stats = GetComponent<PlayerEffects>();
         EM.registerEvent(EventGroup.PlayerStats, gameObject);
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -104,14 +102,13 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
                 ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerMove(transform));
             }
         }
-        else
+        else if (isRolling)
         {
             transform.position += PlayerStats.SpeedMultiplier * stats.stats.rollSpeed * Time.deltaTime * (Vector3)rollDirection;
             ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerRoll(transform));
             if (rollDuration.isAvailable) 
             { 
                 isRolling = false;
-                animator.SetBool("isRolling", false);
                 stats.stats.rollCooldown.Reset();
                 GetComponent<Collider2D>().enabled = true;
                 //just to see invincibility frames
@@ -138,16 +135,19 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
             {
                 isRolling = true;
                 StartRollAnimation();
-                animator.SetBool("isRolling", true);
                 rollDuration.Reset();
                 GetComponent<Collider2D>().enabled = false;
                 //just to see invincibility frames
                 GetComponent<SpriteRenderer>().color = Color.red;
             }
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R)) // TODO: Check reload availability before sending message
         {
-            ExecuteEvents.Execute<IWeaponMessages>(EM.gameObject, null, (x, y) => x.Reload(null));
+            IWeapon weapon = transform.GetChild(0).GetComponent<GunManager>().Current();
+            if (weapon.stats.stats.reloadSpeed.isAvailable && weapon.stats.stats.reloadable && weapon.ammo.isReloadable)
+            {
+                ExecuteEvents.Execute<IWeaponMessages>(EM.gameObject, null, (x, y) => x.Reload(null));
+            }
         }
     }
 

@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEditor.Animations;
 #nullable enable
 public class EffectFactor
 {
@@ -56,7 +58,7 @@ public interface IWeapon : IAbility<Vector3>, IWeaponMessages
 
     void IWeaponMessages.Reload(object? payload)
     {
-        if (stats.stats.reloadSpeed.isAvailable && stats.stats.reloadable)
+        if (stats.stats.reloadSpeed.isAvailable && stats.stats.reloadable && ammo.isReloadable)
         {
             stats.stats.reloadSpeed.Reset();
             ammo.Reload();
@@ -64,11 +66,12 @@ public interface IWeapon : IAbility<Vector3>, IWeaponMessages
     }
 }
 
-public class GunManager : MonoBehaviour
+public class GunManager : MonoBehaviour, IWeaponMessages
 {
     public List<IWeapon> weapons;
     int current = 0;
     public bool locked = false;
+    public Animator ReloadIndicator;
 
     void Start()
     {
@@ -80,6 +83,8 @@ public class GunManager : MonoBehaviour
                 weapons.Add(w);
             }
         }
+
+        Util.GetEventManager().registerEvent(EventGroup.Weapon, gameObject);
     }
     void Update()
     {
@@ -115,5 +120,20 @@ public class GunManager : MonoBehaviour
     public IWeapon? Current()
     {
         return weapons[current];
+    }
+
+    public void Reload(object? payload)
+    {   
+            Debug.Log(1);
+            ReloadIndicator.SetBool("isReloading", true);
+            float reloadDuration = Current().stats.stats.reloadSpeed.duration;
+            ReloadIndicator.SetFloat("SpeedMultiplier", reloadDuration);
+
+            Invoke("StopReloadIndicator", reloadDuration);
+    }
+
+    void StopReloadIndicator()
+    {
+        ReloadIndicator.SetBool("isReloading", false);
     }
 }

@@ -27,4 +27,12 @@ public static class Util
     {
         ExecuteEvents.Execute(GetEventManager().gameObject, null, func);
     }
+    public static Transform GetChildByName(Transform parent, string name)
+    {
+        for (int i = 0; i < parent.childCount; ++i) 
+        {
+            if (parent.GetChild(i).name == name) return parent.GetChild(i);
+        }
+        return parent;
+    }
 }

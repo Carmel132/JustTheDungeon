@@ -39,7 +39,7 @@ namespace Noah
 
         public void OnActivation(AbilityPayload payload)
         {
-            if (!cd.isAvailable) { return; }
+            if (!cd.isAvailable || isActive) { return; }
             gun = GameObject.Instantiate(payload.Ability1Gun, payload.player.GetChild(0));
             gun.GetComponent<BasicGunController>().parent = payload.player.parent.GetChild(1);
 
@@ -66,6 +66,7 @@ namespace Noah
                 payload.gunManager.weapons.RemoveAt(payload.gunManager.weapons.Count - 1);
                 payload.gunManager.transform.parent.gameObject.GetComponent<BasicPlayerController>().canMove = true;
                 GameObject.Destroy(gun);
+                cd.Reset();
             }
         }
 
