@@ -129,11 +129,14 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     }
 
     public void Reload(object? payload)
-    {   
+    {
+        if (ReloadIndicator.GetBool("isReloading")) { return; }
+
+
         Debug.Log(1);
         ReloadIndicator.SetBool("isReloading", true);
         float reloadDuration = Current().stats.stats.reloadSpeed.duration;
-        ReloadIndicator.SetFloat("SpeedMultiplier", 1f/(reloadDuration));
+        ReloadIndicator.SetFloat("SpeedMultiplier", 1.07f/(reloadDuration));
 
         cd.duration = reloadDuration;
         cd.Reset();

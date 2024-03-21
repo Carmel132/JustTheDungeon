@@ -14,6 +14,7 @@ public class PlayerBasicAttack : MonoBehaviour
     public IAbility<Vector3> ability;
     GunManager gunManager;
     bool isPlayerHoldingDownMouse = false;
+    bool reloadClick = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,10 @@ public class PlayerBasicAttack : MonoBehaviour
     void Update()
     {
         HandleInput();
-
         if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
         {
             gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            if (gunManager.Current().ammo.Current == 0) { isPlayerHoldingDownMouse = false; }
         }
 
     }
