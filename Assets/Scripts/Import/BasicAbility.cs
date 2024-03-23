@@ -99,7 +99,9 @@ public class SerializePropertyAttributeDrawer : PropertyDrawer
 }
 #endif*/
 
-
+/// <summary>
+/// Defines a cooldown
+/// </summary>
 public interface ICooldown
 {
     bool isAvailable { get; set; }
@@ -107,6 +109,10 @@ public interface ICooldown
 
     public void Reset();
 }
+
+/// <summary>
+/// Single timer cooldown
+/// </summary>
 [System.Serializable]
 public class TimeCooldown : ICooldown
 {
@@ -132,6 +138,10 @@ public class TimeCooldown : ICooldown
 
     public float percentDone { get => Mathf.Clamp01((Time.time - last) / duration); }
 }
+
+/// <summary>
+/// Charge based timer
+/// </summary>
 [System.Serializable]
 public class ChargeCooldown : ICooldown
 {

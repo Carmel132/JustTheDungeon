@@ -13,11 +13,21 @@ public class EventManager : MonoBehaviour, IPlayerMessages, IWeaponMessages, IPl
 
     private Dictionary<EventGroup, List<GameObject>> register = new Dictionary<EventGroup, List<GameObject>>();
 
+    /// <summary>
+    /// Registers obj to receive eventGroup events
+    /// </summary>
+    /// <param name="eventGroup">The event group the object is registering to</param>
+    /// <param name="obj">The gameobject being registered</param>
     public void registerEvent(EventGroup eventGroup, GameObject obj)
     {
         if (!register.ContainsKey(eventGroup)) { register.Add(eventGroup, new List<GameObject>()); }
         register[eventGroup].Add(obj);
     }
+    /// <summary>
+    /// Deregisters a given object
+    /// </summary>
+    /// <param name="eventGroup">Event group to deregister obj from</param>
+    /// <param name="obj">Object getting deregistered</param>
     public void deregisterEvent(EventGroup eventGroup, GameObject obj)
     {
         register[eventGroup].Remove(obj);
