@@ -72,6 +72,7 @@ namespace Christian
                 l.maxRadius = maxRadius;
                 l.dR = dR;
                 var h = p.GetComponent<Hitbox>();
+                //Remove comment when effects are implemented
                 //h.Effects.Add(new StunEffect(stunDuration));
                 h.Damage = Damage;
                 cd.Reset();
