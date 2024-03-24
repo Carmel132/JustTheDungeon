@@ -17,8 +17,8 @@ public class BasicGunController : MonoBehaviour, IWeapon
     public void OnActivation(Vector3 target)
     {
         if (!stats.stats.fireRate.isAvailable) { return; }
-        if (!stats.stats.reloadSpeed.isAvailable || ammo.Current <= 0) { ExecuteEvents.Execute<IWeaponMessages>(em.gameObject, null, (x, y) => x.Reload(null)); return; }
-
+        if (stats.stats.reloadSpeed.isAvailable && ammo.isReloadable && stats.stats.reloadable && ammo.Current <= 0) { ExecuteEvents.Execute<IWeaponMessages>(em.gameObject, null, (x, y) => x.Reload(null)); return; }
+        if (ammo.Current <= 0) { return; }
         GameObject newProjectile = GameObject.Instantiate(projectile);
         newProjectile.transform.position = start.position;
         newProjectile.transform.SetParent(parent);

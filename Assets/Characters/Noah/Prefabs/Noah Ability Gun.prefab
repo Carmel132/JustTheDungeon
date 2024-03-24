@@ -68,7 +68,7 @@ MonoBehaviour:
     <duration>k__BackingField: 0.06
   damage: 10
   speed: 1000
-  bloom: 5
+  bloom: 6
   reloadable: 0
 --- !u!114 &1593065293104100169
 MonoBehaviour:

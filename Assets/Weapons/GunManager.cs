@@ -5,6 +5,7 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEditor.Animations;
+using System.Net.Http.Headers;
 #nullable enable
 public class EffectFactor
 {
@@ -76,19 +77,16 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     public TimeCooldown cd = new(0);
     void Start()
     {
-        weapons = new();
-        for (int i = 0; i < transform.childCount; ++i)
-        {
-            if (Util.GetComponentThatImplements<IWeapon>(transform.GetChild(i).gameObject) is IWeapon w)
-            {
-                weapons.Add(w);
-            }
-        }
+        UpdateWeaponList();
 
         Util.GetEventManager().registerEvent(EventGroup.Weapon, gameObject);
     }
     void Update()
     {
+        if (transform.childCount != weapons.Count)
+        {
+            UpdateWeaponList();
+        }
         DisableNonCurrent();
 
         if (ReloadIndicator.GetBool("isReloading") && cd.isAvailable)
@@ -130,7 +128,7 @@ public class GunManager : MonoBehaviour, IWeaponMessages
 
     public void Reload(object? payload)
     {
-        if (ReloadIndicator.GetBool("isReloading")) { return; }
+        if (ReloadIndicator.GetBool("isReloading") || !Current().ammo.isReloadable) { return; }
 
 
         Debug.Log(1);
@@ -154,6 +152,18 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     public void InterruptReload()
     {
         ReloadIndicator.SetBool("isReloading", false);
+    }
+
+    void UpdateWeaponList()
+    {
+        weapons = new();
+        for (int i = 0; i < transform.childCount; ++i)
+        {
+            if (Util.GetComponentThatImplements<IWeapon>(transform.GetChild(i).gameObject) is IWeapon w)
+            {
+                weapons.Add(w);
+            }
+        }
     }
     //TODO: Interrupt reload on ability activation
 }
