@@ -94,6 +94,10 @@ public class GunManager : MonoBehaviour, IWeaponMessages
             StopReloadIndicator();
         }
     }
+    void OnGUI()
+    {
+        ReloadIndicator.transform.position = transform.position + new Vector3(0, 2.5f, 0);
+    }
     void DisableNonCurrent()
     {
         for (int i = 0; i < weapons.Count; ++i)
