@@ -25,7 +25,6 @@ public class LaserGunController : MonoBehaviour, IWeapon
         newProjectile.transform.position = start.position;
         newProjectile.transform.SetParent(parent);
         Vector2 dir = Quaternion.Euler(0, 0, UnityEngine.Random.Range(-stats.stats.bloom, stats.stats.bloom)) * ((Vector2)Target - (Vector2)newProjectile.transform.position).normalized;
-        Debug.DrawRay(start.position, dir * 20);
         newProjectile.GetComponent<LaserProjectileController>().target = dir;
         newProjectile.GetComponent<LaserProjectileController>().damage = stats.stats.damage;
         Destroy(newProjectile, lifetime);
