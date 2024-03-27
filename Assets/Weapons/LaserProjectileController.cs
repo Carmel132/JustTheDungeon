@@ -17,7 +17,7 @@ public class LaserProjectileController : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("Hit!");
-                //hit.collider.gameObject.GetComponent<EnemyHealth>().Damage(damage);
+                hit.collider.gameObject.GetComponent<EnemyHealth>().Damage(damage);
             }
         }
     }
