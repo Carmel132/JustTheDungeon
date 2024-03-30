@@ -41,12 +41,6 @@ public class EffectFactor
     }
 }
 
-public interface IWeaponMessages : IEventSystemHandler
-{
-    void AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f) { }
-    void Reload(object? payload) { }
-}
-
 public interface IWeapon : IAbility<Vector3>, IWeaponMessages
 {
     //IAbility<Vector3>.OnActivation(Vector3 payload) == OnFire()

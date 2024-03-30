@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Basic stats of player
+/// </summary>
 public class PlayerStats : MonoBehaviour
 {
     public float movementSpeed;

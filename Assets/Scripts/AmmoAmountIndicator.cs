@@ -14,7 +14,7 @@ public class AmmoAmountIndicator : MonoBehaviour
         text = GetComponent<TMP_Text>();
     }
 
-    void Update()
+    void OnGUI()
     {
         text.text = $"{gm.Current().ammo.Current}/{gm.Current().ammo.Max}";
     }

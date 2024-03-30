@@ -3,6 +3,10 @@ using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DigitalRuby.Tween;
+/// <summary>
+/// Defines a basic ability
+/// </summary>
+/// <typeparam name="T">payload structure</typeparam>
 public interface IAbility<T>
 {
     void Update(T args) { }
@@ -11,16 +15,28 @@ public interface IAbility<T>
     public void OnActivation(T payload) { }
 };
 
+/// <summary>
+/// Defines a passive ability (actives automatically)
+/// </summary>
+/// <typeparam name="T">payload structure</typeparam>
 public interface IPassiveAbility<T> : IAbility<T>
 {
 
 }
 
+/// <summary>
+/// Defines an active ability (activated when player hits the active ability key)
+/// </summary>
+/// <typeparam name="T">payload structure</typeparam>
 public interface IActiveAbility<T> : IAbility<T>
 {
     ICooldown cd { get; set; }
 }
 
+/// <summary>
+/// Defines an ultimate ability (activates when player hits the ultimate ability key) -- charging differs from active
+/// </summary>
+/// <typeparam name="T">payload structure</typeparam>
 public interface IUltimateAbility<T> : IAbility<T>
 {
     float chargeRate { get; set; }
@@ -33,39 +49,37 @@ public interface IUltimateAbility<T> : IAbility<T>
     }
 }
 
-public interface IPlayerMessages : IEventSystemHandler
-{
-    void OnPlayerMainAttack(Transform player) { }
-    void OnPlayerActiveAbility(Transform player) { }
-    void OnPlayerUltimateAbility(Transform player) { }
-    void OnPlayerHit(Transform player) { }
-    void OnPlayerMove(Transform player) { }
-    void OnPlayerRoll(Transform player) { }
-    void OnPlayerInteract(Transform player) { }
-    void PlayerChargeUlt(float damage) { }
-    void OnPlayerKill(Transform player, Transform enemy) { }
-}
-
-// TODO: Create ability information interfaces
+/// <summary>
+/// Encapsulates a character's ability structure
+/// </summary>
+/// <typeparam name="Payload">Payload structure</typeparam>
 public interface IPlayerAbilities<Payload> where Payload : IPlayerAbilityPayload
 {
     public IPassiveAbility<Payload> passive { get; set; }
     public IActiveAbility<Payload> active { get; set; }
     public IUltimateAbility<Payload> ultimate { get; set; }
 }
-// fuck abstraction (kill me)
+
+/// <summary>
+/// Basic ability payload structure
+/// </summary>
 public interface IPlayerAbilityPayload
 {
     public Transform player { get; set; }
 }
 
-
+/// <summary>
+/// Defines rollability
+/// </summary>
 public interface IPlayerRollable
 {
     public bool isRolling { get;set; }
     public TimeCooldown rollDuration { get; set; }
 }
 
+/// <summary>
+/// Controls player movement and input excluding attacks
+/// </summary>
 public class BasicPlayerController : MonoBehaviour, IPlayerController
 {
     public EventManager EM;

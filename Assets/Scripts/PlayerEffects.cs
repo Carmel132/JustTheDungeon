@@ -8,10 +8,6 @@ public enum PlayerEffectTarget
 {
     MOVEMENTSPEED, MAXHP, HP, ROLLSPEED, ROLLCOOLDOWN
 }
-public interface IPlayerStatMessages : IEventSystemHandler
-{
-    void AddStatChange((PlayerEffectTarget, EffectFactor, TimeCooldown?) f) { }
-}
 public class PlayerEffects : MonoBehaviour
 {
 

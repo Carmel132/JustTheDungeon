@@ -8,6 +8,9 @@ public enum EventGroup
     Player, PlayerStats, Weapon
 }
 
+/// <summary>
+/// Event Manager component; globalizes events
+/// </summary>
 public class EventManager : MonoBehaviour, IPlayerMessages, IWeaponMessages, IPlayerStatMessages
 {
 

@@ -1,7 +1,9 @@
 using UnityEngine;
 
 
-
+/// <summary>
+/// Handles user-to-player-to-gun manager linking
+/// </summary>
 public class PlayerBasicAttack : MonoBehaviour
 {
     public IAbility<Vector3> ability;

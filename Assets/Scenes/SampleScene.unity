@@ -581,6 +581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Master Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 2739288640283313183, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
 --- !u!1 &519420028
