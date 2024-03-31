@@ -50,6 +50,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0, z: 0}
   damage: 0
+  gunShootPos: {fileID: 0}
+  lifetime:
+    <duration>k__BackingField: 0
 --- !u!120 &6016782395931401393
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -101,8 +104,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.030500334
+        value: 0.2714265
         inSlope: 0
         outSlope: 0
         tangentMode: 0

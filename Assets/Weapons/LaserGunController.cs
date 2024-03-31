@@ -10,6 +10,7 @@ public class LaserGunController : MonoBehaviour, IWeapon
     public Transform parent;
     public Transform start;
     public float lifetime;
+    public bool laserTailFollow = false; // will tail of laser follow tip of gun barrel
     public GunEffectManager stats { get; set; }
     public BasicAmmoManager ammo { get; set; }
 
@@ -25,8 +26,12 @@ public class LaserGunController : MonoBehaviour, IWeapon
         newProjectile.transform.position = start.position;
         newProjectile.transform.SetParent(parent);
         Vector2 dir = Quaternion.Euler(0, 0, UnityEngine.Random.Range(-stats.stats.bloom, stats.stats.bloom)) * ((Vector2)Target - (Vector2)newProjectile.transform.position).normalized;
-        newProjectile.GetComponent<LaserProjectileController>().target = dir;
-        newProjectile.GetComponent<LaserProjectileController>().damage = stats.stats.damage;
+
+        var controller = newProjectile.GetComponent<LaserProjectileController>();
+        controller.target = dir;
+        controller.damage = stats.stats.damage;
+        controller.gunShootPos = start;
+        if (laserTailFollow) controller.lifetime = new(lifetime);
         Destroy(newProjectile, lifetime);
         stats.stats.fireRate.Reset();
         ammo.OnActivation();
