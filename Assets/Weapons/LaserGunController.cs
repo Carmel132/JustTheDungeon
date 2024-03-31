@@ -30,8 +30,8 @@ public class LaserGunController : MonoBehaviour, IWeapon
         var controller = newProjectile.GetComponent<LaserProjectileController>();
         controller.target = dir;
         controller.damage = stats.stats.damage;
-        controller.gunShootPos = start;
-        if (laserTailFollow) controller.lifetime = new(lifetime);
+        if (laserTailFollow) controller.gunShootPos = start;
+        controller.lifetime = new(lifetime);
         Destroy(newProjectile, lifetime);
         stats.stats.fireRate.Reset();
         ammo.OnActivation();
