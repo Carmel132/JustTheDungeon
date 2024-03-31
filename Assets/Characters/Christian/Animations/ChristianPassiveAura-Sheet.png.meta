@@ -1,0 +1,971 @@
+fileFormatVersion: 2
+guid: 8b665b59e078a4648b3ff3cc3013f0fd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb300b5b51c394945aa4e419db05a428
+      internalID: -672999203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4ad4eba8f7bae4aa7c61e9ac3718d3
+      internalID: 689048808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb60e648f8123314d932d2627d8983f7
+      internalID: -802997211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52458a4a9b2b314d8730261d6ffc5be
+      internalID: -1955206324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35045b1b7ab121143bda12e0ddfca047
+      internalID: -241032102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8305854e8f4e8c84a9eef390dc48831e
+      internalID: 304299583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288f110e0c04fb441bb27e2cf034ecf8
+      internalID: 1915842120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b270b895b4f10984badad4317ca1a492
+      internalID: -1789844108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbf7242abed0df4baf5b591ddbfb988
+      internalID: -920345025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2b7e1c4507cb34ea39bf61ae71c141
+      internalID: -1624075783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acf8104d37f6dd4f8b129f09ebb47ba
+      internalID: -413427654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2830
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bcc78bc4c19e24c8913848caeb7e62
+      internalID: -526149112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3086
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7abd909e6e17a48bba12c8e16f68d9
+      internalID: 1593770124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14eb67e75426864896e7774b5494e3b
+      internalID: -376338848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7341e8fd683efb458a1bb7b43cee548
+      internalID: 1426250940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5957ed866d159f4cae5cdc607b86702
+      internalID: -63117978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 4110
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b772e6f09a905fa4ea6280196a8b52c0
+      internalID: 1252887638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 4366
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4d8d62d94d19340931f983910ee516
+      internalID: 1731928561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 4622
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6349f9b4c80714d9b91bafdc86c79c
+      internalID: -1695931766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 4878
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb1b0e09cc733b449958c8b0f611d04
+      internalID: -1571300117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 5134
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e8f1e8deb6ea7428dae7b156c21340
+      internalID: -613433695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 5390
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b1f00c579369847a7e19415a76078c
+      internalID: -719721441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 5646
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa6da7d848f76c4cad0a51c4b6a871e
+      internalID: -991650750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5902
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d10abc5560e8f458b789070c18aff7
+      internalID: -1326926269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 6158
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88a1c750e83c4148b15d1761c8dac7e
+      internalID: 144757999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 6414
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d207ba1740d1e47907233ec8eb2da3
+      internalID: 493603622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 6670
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2a0d7819584c1469326b1d8f2d1135
+      internalID: 1586643771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 6926
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e479d3a4e273e3428d002a8ab36a824
+      internalID: -682068210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 7182
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8567edaecb39ac74392e1c5f6ec9ffd0
+      internalID: -1501444771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 7438
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6605d77053b0cd249b6d47956e8831c6
+      internalID: -739163448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 7694
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82aa1a85e61b6042838e85f85a2b478
+      internalID: -1607651036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 7950
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c13bd1428105243850761408b8ab9d
+      internalID: 442355463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 8206
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae336bca6633e0941bbdb6d5496da3b5
+      internalID: 1035855445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 8462
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78226c9b13b32d549a3d2aada028b79c
+      internalID: -13576251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 8718
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f750aa0f744f34898c034f619f7121
+      internalID: -953276541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 8974
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97081309e9ca3bd418962b09bf79a9a2
+      internalID: -292177123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 9230
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291495de21afb924c95898764dac9671
+      internalID: 223823968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChristianPassiveAura-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 9486
+        y: 14
+        width: 228
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f543ada4c2dec4c97e2d77789e7fd6
+      internalID: 589167783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChristianPassiveAura-Sheet_8: -920345025
+      ChristianPassiveAura-Sheet_10: -413427654
+      ChristianPassiveAura-Sheet_12: 1593770124
+      ChristianPassiveAura-Sheet_26: 1586643771
+      ChristianPassiveAura-Sheet_9: -1624075783
+      ChristianPassiveAura-Sheet_6: 1915842120
+      ChristianPassiveAura-Sheet_13: -376338848
+      ChristianPassiveAura-Sheet_17: 1731928561
+      ChristianPassiveAura-Sheet_36: 223823968
+      ChristianPassiveAura-Sheet_37: 589167783
+      ChristianPassiveAura-Sheet_19: -1571300117
+      ChristianPassiveAura-Sheet_24: 144757999
+      ChristianPassiveAura-Sheet_0: -672999203
+      ChristianPassiveAura-Sheet_16: 1252887638
+      ChristianPassiveAura-Sheet_28: -1501444771
+      ChristianPassiveAura-Sheet_4: -241032102
+      ChristianPassiveAura-Sheet_5: 304299583
+      ChristianPassiveAura-Sheet_20: -613433695
+      ChristianPassiveAura-Sheet_2: -802997211
+      ChristianPassiveAura-Sheet_15: -63117978
+      ChristianPassiveAura-Sheet_35: -292177123
+      ChristianPassiveAura-Sheet_22: -991650750
+      ChristianPassiveAura-Sheet_32: 1035855445
+      ChristianPassiveAura-Sheet_11: -526149112
+      ChristianPassiveAura-Sheet_30: -1607651036
+      ChristianPassiveAura-Sheet_23: -1326926269
+      ChristianPassiveAura-Sheet_31: 442355463
+      ChristianPassiveAura-Sheet_34: -953276541
+      ChristianPassiveAura-Sheet_33: -13576251
+      ChristianPassiveAura-Sheet_29: -739163448
+      ChristianPassiveAura-Sheet_1: 689048808
+      ChristianPassiveAura-Sheet_3: -1955206324
+      ChristianPassiveAura-Sheet_25: 493603622
+      ChristianPassiveAura-Sheet_7: -1789844108
+      ChristianPassiveAura-Sheet_21: -719721441
+      ChristianPassiveAura-Sheet_18: -1695931766
+      ChristianPassiveAura-Sheet_27: -682068210
+      ChristianPassiveAura-Sheet_14: 1426250940
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
