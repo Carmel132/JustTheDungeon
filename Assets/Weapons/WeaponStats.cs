@@ -8,4 +8,5 @@ public class WeaponStats : MonoBehaviour
     public float speed;
     public float bloom;
     public bool reloadable = true;
+    public bool barrelGlowEffect = true;
 }

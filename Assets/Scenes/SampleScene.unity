@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000494c0dbb
+  m_ApplyToSortingLayers: 494c0dbb00000000ebbf770c
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1001,8 +1001,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1156756407
-  m_SortingLayer: -1
+  m_SortingLayerID: 209174507
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1211,6 +1211,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 637794069}
+--- !u!1 &1175792059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2739288640283313179, guid: a0cf84f268b7a6a41bf620377d825dfd, type: 3}
+  m_PrefabInstance: {fileID: 2739288640625112066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1175792064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175792059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3e9cfe0d5cb0643aca51092eaf27e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0080451965
+      value: 0.55703735
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9653846
+      value: 1.0093396
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  barrel: {fileID: 1398372306}
+  intensityMultiplier: 1
+  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1227504328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1430,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1398372306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2739288640778122025, guid: a0cf84f268b7a6a41bf620377d825dfd, type: 3}
+  m_PrefabInstance: {fileID: 2739288640625112066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1435933920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2739288640778122025, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
@@ -2414,6 +2463,7 @@ MonoBehaviour:
   speed: 1000
   bloom: 3
   reloadable: 1
+  barrelGlowEffect: 1
 --- !u!114 &4601486693893125257
 MonoBehaviour:
   m_ObjectHideFlags: 0

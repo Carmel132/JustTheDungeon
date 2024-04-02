@@ -35,6 +35,7 @@ public class LaserGunController : MonoBehaviour, IWeapon
         Destroy(newProjectile, lifetime);
         stats.stats.fireRate.Reset();
         ammo.OnActivation();
+        Util.CallEvent<IPlayerMessages>((x, y) => x.OnPlayerMainAttack(transform.parent.parent));
     }
 
     // Start is called before the first frame update

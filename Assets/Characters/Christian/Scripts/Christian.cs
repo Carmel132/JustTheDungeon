@@ -15,6 +15,7 @@ namespace Christian
         {
 
             AbilityStart();
+            EM = Util.GetEventManager();
             EM.registerEvent(EventGroup.Player, gameObject);
         }
 
