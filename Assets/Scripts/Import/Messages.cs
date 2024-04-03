@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+#nullable enable
 /// <summary>
 /// Defines player messages
 /// </summary>

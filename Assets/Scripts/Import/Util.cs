@@ -55,4 +55,14 @@ public static class Util
         }
         return parent;
     }
+    /// <summary>
+    /// Attempts to get a component from a game object, and instantiates one if failed
+    /// </summary>
+    /// <typeparam name="T">Component type</typeparam>
+    /// <param name="gameObject">The game object being referenced</param>
+    /// <param name="component">The found/added component</param>
+    public static void TryGetElseAddComponent<T>(GameObject gameObject, out T component) where T: Component
+    {
+        if (!gameObject.TryGetComponent(out component)) component = gameObject.AddComponent<T>();
+    }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponStats : MonoBehaviour
 {
-    public TimeCooldown reloadSpeed = new TimeCooldown();
+    public TimeCooldown reloadSpeed = new();
     public TimeCooldown fireRate;
     public float damage;
     public float speed;

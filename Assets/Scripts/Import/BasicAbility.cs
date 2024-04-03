@@ -133,7 +133,7 @@ public class TimeCooldown : ICooldown
 
     public TimeCooldown(float? _d = null)
     {
-        if (_d is float) { duration = (float)_d; }
+        if (_d is float v) { duration = v; }
     }
 
     public float percentDone { get => Mathf.Clamp01((Time.time - last) / duration); }

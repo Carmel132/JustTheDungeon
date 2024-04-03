@@ -169,10 +169,10 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
     public void StartRollAnimation()
     {
         Debug.Log(1);
-        System.Action<ITween<float>> updatePlayerRotation = (t) =>
+        void updatePlayerRotation(ITween<float> t)
         {
             transform.rotation = Quaternion.Euler(0, 0, t.CurrentValue);
-        };
+        }
 
         float currentRotation = transform.rotation.z;
         float midPos = 180 * -Input.GetAxisRaw("Horizontal");

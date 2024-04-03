@@ -11,15 +11,13 @@ public class GunEffectManager : MonoBehaviour
 
 
     public WeaponStats stats;
-    Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)> effects = new Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)>();
-    static System.Random rnd = new System.Random();
-    // Start is called before the first frame update
+    Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)> effects = new();
+    readonly static System.Random rnd = new();
+
     void Start()
     {
         stats = GetComponent<WeaponStats>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         var temp = new Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)>(effects);

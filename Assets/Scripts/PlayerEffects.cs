@@ -2,7 +2,6 @@ using UnityEngine;
 #nullable enable
 
 using EffectDictionary = System.Collections.Generic.Dictionary<int, (PlayerEffectTarget, EffectFactor, TimeCooldown?)>;
-using UnityEngine.EventSystems;
 
 public enum PlayerEffectTarget
 {
@@ -13,7 +12,7 @@ public class PlayerEffects : MonoBehaviour
 
     public PlayerStats stats;
     EffectDictionary effects;
-    static System.Random rnd = new System.Random();
+    readonly static System.Random rnd = new();
 
     public void Add(int id, (PlayerEffectTarget, EffectFactor, TimeCooldown?) t)
     {

@@ -14,7 +14,7 @@ public class AnnulusGenerator : MonoBehaviour
     void Start()
     {
 
-        lineRenderer = GetComponent<LineRenderer>();
+        TryGetComponent(out lineRenderer);
         if (lineRenderer == null ) lineRenderer = gameObject.AddComponent<LineRenderer>();
     }
 
@@ -28,10 +28,10 @@ public class AnnulusGenerator : MonoBehaviour
     Vector3[] GeneratePoints()
     {
         Vector3[] points = new Vector3[caps + 1];
-        float mult = Mathf.PI * 2 / caps;
+        float multiplier = Mathf.PI * 2 / caps;
         for (int i = 0; i <= caps; ++i)
         {
-            points[i] = transform.position + radius * new Vector3(Mathf.Cos(mult * i), Mathf.Sin(mult * i), 0);
+            points[i] = transform.position + radius * new Vector3(Mathf.Cos(multiplier * i), Mathf.Sin(multiplier * i), 0);
         }
         return points;
     }
