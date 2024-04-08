@@ -1,64 +1,54 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static GunEffectManager;
 #nullable enable
-public enum GunEffectManagerTarget
-{
-    RELOADSPEED, FIRERATE, DAMAGE, SPEED, BLOOM
-}
 
-public class GunEffectManager : MonoBehaviour
-{
 
+public class GunEffectManager : MonoBehaviour, IEffectManager<GunEffectManagerTarget>
+{
+    public enum GunEffectManagerTarget : int
+    {
+        RELOADSPEED, FIRERATE, DAMAGE, SPEED, BLOOM
+    }
 
     public WeaponStats stats;
-    Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)> effects = new();
-    readonly static System.Random rnd = new();
+    public EffectManager<GunEffectManagerTarget> effectManager { get; set; }
 
     void Start()
     {
         stats = GetComponent<WeaponStats>();
+        effectManager = new(ImplementEffect, NullifyEffect);
+        effectManager.EffectManagerStart();
     }
     void Update()
     {
-        var temp = new Dictionary<int, (GunEffectManagerTarget, EffectFactor, TimeCooldown?)>(effects);
-        foreach (var effect in temp)
-        {
-            if (effect.Value.Item3 == null) { continue; }
-            else if (effect.Value.Item3.isAvailable)
-            {
-                Remove(effect.Key);
-            }
-        }
+        effectManager.EffectManagerUpdate();
     }
 
-    public void Add(int id, GunEffectManagerTarget target, EffectFactor f, TimeCooldown? t)
+    public void ImplementEffect((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
-        t?.Reset();
-        if (effects.ContainsKey(id)) { effects[id] = (target, f, t); }
-        else { effects.Add(id, (target, f, t)); }
-        switch (target)
+        switch (f.Item1)
         {
             case GunEffectManagerTarget.RELOADSPEED:
-                stats.reloadSpeed = f * stats.reloadSpeed;
+                stats.reloadSpeed = f.Item2 * stats.reloadSpeed;
                 break;
             case GunEffectManagerTarget.FIRERATE:
-                stats.fireRate = f * stats.fireRate;
+                stats.fireRate = f.Item2 * stats.fireRate;
                 break;
             case GunEffectManagerTarget.DAMAGE:
-                stats.damage = f * stats.damage;
+                stats.damage = f.Item2 * stats.damage;
                 break;
             case GunEffectManagerTarget.SPEED:
-                stats.speed = f * stats.speed;
+                stats.speed = f.Item2 * stats.speed;
                 break;
             case GunEffectManagerTarget.BLOOM:
-                stats.bloom = f * stats.bloom;
+                stats.bloom = f.Item2 * stats.bloom;
                 break;
         }
     }
 
-    public void Remove(int id)
+    public void NullifyEffect((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
-        var f = effects[id];
         switch (f.Item1)
         {
             case GunEffectManagerTarget.RELOADSPEED:
@@ -77,13 +67,5 @@ public class GunEffectManager : MonoBehaviour
                 stats.bloom = f.Item2 / stats.bloom;
                 break;
         }
-        effects.Remove(id);
-    }
-
-    public int newId()
-    {
-        int ret;
-        do { ret = rnd.Next(); } while (effects.ContainsKey(ret));
-        return ret;
     }
 }

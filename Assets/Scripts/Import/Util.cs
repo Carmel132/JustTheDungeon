@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public static class Util
 {
+    public readonly static System.Random rnd = new();
+
     /// <summary>
     /// Gets a component from game object that implements an interface
     /// </summary>

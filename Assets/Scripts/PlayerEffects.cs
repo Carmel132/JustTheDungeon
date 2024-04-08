@@ -1,24 +1,22 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using static PlayerEffects;
+using static UnityEngine.GraphicsBuffer;
 #nullable enable
 
-using EffectDictionary = System.Collections.Generic.Dictionary<int, (PlayerEffectTarget, EffectFactor, TimeCooldown?)>;
-
-public enum PlayerEffectTarget
+public class PlayerEffects : MonoBehaviour, IEffectManager<PlayerEffectTarget>
 {
-    MOVEMENTSPEED, MAXHP, HP, ROLLSPEED, ROLLCOOLDOWN
-}
-public class PlayerEffects : MonoBehaviour
-{
+    public enum PlayerEffectTarget : int
+    {
+        MOVEMENTSPEED, MAXHP, HP, ROLLSPEED, ROLLCOOLDOWN
+    }
 
     public PlayerStats stats;
-    EffectDictionary effects;
-    readonly static System.Random rnd = new();
+    public EffectManager<PlayerEffectTarget> effectManager { get; set; }
 
-    public void Add(int id, (PlayerEffectTarget, EffectFactor, TimeCooldown?) t)
+    public void ImplementEffect((PlayerEffectTarget, EffectFactor, TimeCooldown?) t)
     {
-        t.Item3?.Reset();
-        if (effects.ContainsKey(id)) { effects[id] = t; }
-        else { effects.Add(id, t); }
         switch (t.Item1)
         {
             case PlayerEffectTarget.MOVEMENTSPEED:
@@ -38,10 +36,9 @@ public class PlayerEffects : MonoBehaviour
                 break;
         }
     }
-
-    public void Remove(int id)
+    
+    public void NullifyEffect((PlayerEffectTarget, EffectFactor, TimeCooldown?) t)
     {
-        var t = effects[id];
         switch (t.Item1)
         {
             case PlayerEffectTarget.MOVEMENTSPEED:
@@ -60,30 +57,16 @@ public class PlayerEffects : MonoBehaviour
                 stats.rollCooldown = t.Item2 / stats.rollCooldown;
                 break;
         }
-        effects.Remove(id);
     }
     void Start()
     {
         stats = GetComponent<PlayerStats>();
-        effects = new EffectDictionary();
+        effectManager = new(ImplementEffect, NullifyEffect);
+        effectManager.EffectManagerStart();
     }
-    void Update()
+    private void Update()
     {
-        var temp = new EffectDictionary();
-        foreach (var effect in temp)
-        {
-            if (effect.Value.Item3 == null) { continue; }
-            else if (effect.Value.Item3.isAvailable)
-            {
-                Remove(effect.Key);
-            }
-        }
-    }
-    public int newId()
-    {
-        int ret;
-        do { ret = rnd.Next(); } while (effects.ContainsKey(ret));
-        return ret;
+        effectManager.EffectManagerUpdate();
     }
 }
 public interface IPlayerController : IPlayerStatMessages, IPlayerRollable
@@ -91,7 +74,7 @@ public interface IPlayerController : IPlayerStatMessages, IPlayerRollable
     public PlayerEffects stats { get; set; }
     void IPlayerStatMessages.AddStatChange((PlayerEffectTarget, EffectFactor, TimeCooldown?) f)
     {
-        stats.Add(stats.newId(), f);
+        stats.effectManager.Add(stats.effectManager.newId(), f);
     }
     public void HandleMovement();
     public void HandleInput();

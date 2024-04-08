@@ -22,7 +22,7 @@ public interface IPlayerMessages : IEventSystemHandler
 /// </summary>
 public interface IWeaponMessages : IEventSystemHandler
 {
-    void AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f) { }
+    void AddStatChange((GunEffectManager.GunEffectManagerTarget, EffectFactor, TimeCooldown?) f) { }
     void Reload(object? payload) { }
 }
 
@@ -31,5 +31,5 @@ public interface IWeaponMessages : IEventSystemHandler
 /// </summary>
 public interface IPlayerStatMessages : IEventSystemHandler
 {
-    void AddStatChange((PlayerEffectTarget, EffectFactor, TimeCooldown?) f) { }
+    void AddStatChange((PlayerEffects.PlayerEffectTarget, EffectFactor, TimeCooldown?) f) { }
 }
