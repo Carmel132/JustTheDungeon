@@ -585,6 +585,10 @@ PrefabInstance:
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2739288640283313183, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
+      propertyPath: chargeDuration.<duration>k__BackingField
+      value: 0.48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
 --- !u!1 &519420028
@@ -2563,6 +2567,8 @@ MonoBehaviour:
   damage: 1
   speed: 1000
   bloom: 3
+  chargeDuration:
+    <duration>k__BackingField: 0
   reloadable: 1
   barrelGlowEffect: 1
 --- !u!114 &4601486693893125257

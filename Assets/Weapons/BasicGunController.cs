@@ -35,7 +35,6 @@ public class BasicGunController : MonoBehaviour, IWeapon
     void Start()
     {
         em = Util.GetEventManager();
-        transform.parent.parent.GetComponent<PlayerBasicAttack>().ability = this;
         stats = GetComponent<GunEffectManager>();
         em.registerEvent(EventGroup.Weapon, gameObject);
         ammo = GetComponent<BasicAmmoManager>();

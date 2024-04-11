@@ -7,6 +7,7 @@ public class WeaponStats : MonoBehaviour
     public float damage;
     public float speed;
     public float bloom;
+    public TimeCooldown chargeDuration;
     public bool reloadable = true;
     public bool barrelGlowEffect = true;
 }

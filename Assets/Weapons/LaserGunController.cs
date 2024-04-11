@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LaserGunController : MonoBehaviour, IWeapon
+public class LaserGunController : MonoBehaviour, IChargeableWeapon, IWeapon
 {
     public GameObject projectile;
     public Transform parent;
@@ -14,11 +14,16 @@ public class LaserGunController : MonoBehaviour, IWeapon
     public GunEffectManager stats { get; set; }
     public BasicAmmoManager ammo { get; set; }
 
+    public TimeCooldown charging { get => chargingWeapon; set { chargingWeapon = value; chargingWeapon.Finish(); } }
+
+    TimeCooldown chargingWeapon;
+    public bool doneCharging { get => !charging.isAvailable; }
+
     EventManager em;
 
     public void OnActivation(Vector3 Target)
     {
-        if (!stats.stats.fireRate.isAvailable) { return; }
+        if (!stats.stats.fireRate.isAvailable || doneCharging) { return; }
         if (stats.stats.reloadSpeed.isAvailable && ammo.isReloadable && stats.stats.reloadable && ammo.Current <= 0) { ExecuteEvents.Execute<IWeaponMessages>(em.gameObject, null, (x, y) => x.Reload(null)); return; }
         if (ammo.Current <= 0) { return; }
 
@@ -45,11 +50,12 @@ public class LaserGunController : MonoBehaviour, IWeapon
         stats = GetComponent<GunEffectManager>();
         em.registerEvent(EventGroup.Weapon, gameObject);
         ammo = GetComponent<BasicAmmoManager>();
+        charging = stats.stats.chargeDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(charging.percentDone);
     }
 }

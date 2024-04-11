@@ -6,20 +6,30 @@ using UnityEngine;
 /// </summary>
 public class PlayerBasicAttack : MonoBehaviour
 {
-    public IAbility<Vector3> ability;
     GunManager gunManager;
     bool isPlayerHoldingDownMouse = false;
-
+    bool didPlayerReleaseMouse = false;
+    bool didPlayerClickMouse = false;
     void Start()
     {
         gunManager = GetComponentInChildren<GunManager>();
     }
-
-    // TODO: Migrate input to controller and implement events
+    // TODO: implement shoot-roll cancelling
     void Update()
     {
         HandleInput();
-        if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
+        if (!GetComponent<BasicPlayerController>().isRolling && gunManager.Current() is IChargeableWeapon weapon)
+        {
+            if (didPlayerClickMouse)
+            {
+                weapon.StartCharging();
+            }
+            else if (didPlayerReleaseMouse)
+            {
+                gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            }
+        }
+        else if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
         {
             gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             if (gunManager.Current().ammo.Current == 0) { isPlayerHoldingDownMouse = false; }
@@ -29,8 +39,18 @@ public class PlayerBasicAttack : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0)) { isPlayerHoldingDownMouse = true; }
-        if (Input.GetMouseButtonUp(0)) { isPlayerHoldingDownMouse = false; }
+        didPlayerClickMouse = false;
+        didPlayerReleaseMouse = false;
+        if (Input.GetMouseButtonDown(0)) 
+        {
+            didPlayerClickMouse = true;
+            isPlayerHoldingDownMouse = true; 
+        }
+        if (Input.GetMouseButtonUp(0)) 
+        { 
+            didPlayerReleaseMouse = true;
+            isPlayerHoldingDownMouse = false; 
+        }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
