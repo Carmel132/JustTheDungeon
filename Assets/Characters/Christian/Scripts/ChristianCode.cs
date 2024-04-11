@@ -94,11 +94,11 @@ namespace Christian
         {
             if (cd.isAvailable)
             {
-                ExecuteEvents.Execute<IWeaponMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.FIRERATE, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
-                ExecuteEvents.Execute<IWeaponMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.RELOADSPEED, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
-                ExecuteEvents.Execute<IWeaponMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManagerTarget.BLOOM, new EffectFactor(1, 4), new TimeCooldown(8f))));
-                ExecuteEvents.Execute<IPlayerStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((PlayerEffectTarget.MAXHP, new EffectFactor(1, 2), new TimeCooldown(8f))));
-                ExecuteEvents.Execute<IPlayerStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((PlayerEffectTarget.HP, new EffectFactor(1, 2), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IWeaponMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManager.GunEffectManagerTarget.FIRERATE, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IWeaponMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManager.GunEffectManagerTarget.RELOADSPEED, new EffectFactor(0.5f, 0), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IWeaponMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((GunEffectManager.GunEffectManagerTarget.BLOOM, new EffectFactor(1, 4), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IPlayerStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((PlayerEffects.PlayerEffectTarget.MAXHP, new EffectFactor(1, 2), new TimeCooldown(8f))));
+                ExecuteEvents.Execute<IPlayerStatMessages>(t.em.gameObject, null, (x, y) => x.AddStatChange((PlayerEffects.PlayerEffectTarget.HP, new EffectFactor(1, 2), new TimeCooldown(8f))));
                 cd.Reset();
             }
         }

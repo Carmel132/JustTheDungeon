@@ -102,7 +102,7 @@ public class EventManager : MonoBehaviour, IPlayerMessages, IWeaponMessages, IPl
     }
 
     //IWeaponMessages
-    public void AddStatChange((GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
+    public void AddStatChange((GunEffectManager.GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
         foreach (var obj in register[EventGroup.Weapon])
         {
@@ -119,7 +119,7 @@ public class EventManager : MonoBehaviour, IPlayerMessages, IWeaponMessages, IPl
     }
 
     //IPlayerStatMessages
-    public void AddStatChange((PlayerEffectTarget, EffectFactor, TimeCooldown?) t)
+    public void AddStatChange((PlayerEffects.PlayerEffectTarget, EffectFactor, TimeCooldown?) t)
     {
         foreach (var obj in register[EventGroup.PlayerStats])
         {
