@@ -14,6 +14,8 @@ public class LaserGunController : MonoBehaviour, IChargeableWeapon, IWeapon
     public GunEffectManager stats { get; set; }
     public BasicAmmoManager ammo { get; set; }
 
+    public AttackInputManagers.IAttackInputManager attackInputManager { get; set; }
+
     public TimeCooldown charging { get => chargingWeapon; set { chargingWeapon = value; chargingWeapon.Finish(); } }
 
     TimeCooldown chargingWeapon;
@@ -51,6 +53,7 @@ public class LaserGunController : MonoBehaviour, IChargeableWeapon, IWeapon
         em.registerEvent(EventGroup.Weapon, gameObject);
         ammo = GetComponent<BasicAmmoManager>();
         charging = stats.stats.chargeDuration;
+        attackInputManager = new AttackInputManagers.ChargeAttack();
     }
 
     // Update is called once per frame

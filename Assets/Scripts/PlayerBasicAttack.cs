@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 /// <summary>
 /// Handles user-to-player-to-gun manager linking
 /// </summary>
@@ -18,21 +17,37 @@ public class PlayerBasicAttack : MonoBehaviour
     void Update()
     {
         HandleInput();
-        if (!GetComponent<BasicPlayerController>().isRolling && gunManager.Current() is IChargeableWeapon weapon)
+        //if (!GetComponent<BasicPlayerController>().isRolling && gunManager.Current() is IChargeableWeapon weapon)
+        //{
+        //    if (didPlayerClickMouse)
+        //    {
+        //        weapon.StartCharging();
+        //    }
+        //    else if (didPlayerReleaseMouse)
+        //    {
+        //        gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        //    }
+        //}
+        //else if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
+        //{
+        //    gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        //    if (gunManager.Current().ammo.Current == 0) { isPlayerHoldingDownMouse = false; }
+        //}
+        if (!GetComponent<BasicPlayerController>().isRolling)
         {
+            AttackInputManagers.IAttackInputManager attackInputManager = gunManager.Current().attackInputManager;
+            if (isPlayerHoldingDownMouse)
+            {
+                attackInputManager.OnHold(gunManager);
+            }
             if (didPlayerClickMouse)
             {
-                weapon.StartCharging();
+                attackInputManager.OnClick(gunManager);
             }
-            else if (didPlayerReleaseMouse)
+            if (didPlayerReleaseMouse)
             {
-                gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                attackInputManager.OnRelease(gunManager);
             }
-        }
-        else if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
-        {
-            gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            if (gunManager.Current().ammo.Current == 0) { isPlayerHoldingDownMouse = false; }
         }
 
     }
