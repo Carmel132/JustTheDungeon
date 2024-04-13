@@ -137,6 +137,8 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
         if (Input.GetMouseButtonDown(1) && !isRolling)
         {
             ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerActiveAbility(transform));
+            transform.GetChild(0).GetComponent<GunManager>().InterruptReload();
+
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isRolling)
         {
