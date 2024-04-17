@@ -10,6 +10,7 @@ namespace Noah
         public bool getShield = false;
         public GameObject Ability1Gun { get; set; }
         public GunManager gunManager { get; set; }
+        public bool didRoll = false;
     }
 
     public class Abilities : IPlayerAbilities<AbilityPayload>
@@ -58,6 +59,7 @@ namespace Noah
 
         public void Update(AbilityPayload payload)
         {
+            if (payload.didRoll && isActive) { duration.Finish(); Debug.Log(duration.isAvailable); }
             if (isActive && (duration.isAvailable || gun.GetComponent<BasicAmmoManager>().Current == 0))
             {
                 isActive = false;

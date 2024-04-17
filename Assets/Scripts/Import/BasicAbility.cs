@@ -30,7 +30,7 @@ public class TimeCooldown : ICooldown
 
     public void Finish()
     {
-        last += duration;
+        last -= duration;
     }
 
     public TimeCooldown(float? _d = null)

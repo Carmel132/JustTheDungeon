@@ -119,7 +119,7 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
         else if (isRolling)
         {
             transform.position += PlayerStats.SpeedMultiplier * stats.stats.rollSpeed * Time.deltaTime * (Vector3)rollDirection;
-            ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerRoll(transform));
+            //ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerRoll(transform));
             if (rollDuration.isAvailable) 
             { 
                 isRolling = false;
@@ -149,6 +149,7 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
             rollDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
             if (rollDirection.magnitude != 0)
             {
+                Util.CallEvent<IPlayerMessages>((x, _) => x.OnPlayerRoll(transform));
                 isRolling = true;
                 StartRollAnimation();
                 rollDuration.Reset();
@@ -173,7 +174,7 @@ public class BasicPlayerController : MonoBehaviour, IPlayerController
         Debug.Log(1);
         void updatePlayerRotation(ITween<float> t)
         {
-            transform.rotation = Quaternion.Euler(0, 0, t.CurrentValue);
+            if (isRolling) transform.rotation = Quaternion.Euler(0, 0, t.CurrentValue);
         }
 
         float currentRotation = transform.rotation.z;

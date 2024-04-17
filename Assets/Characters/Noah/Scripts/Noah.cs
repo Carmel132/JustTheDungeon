@@ -9,6 +9,7 @@ namespace Noah {
         const int PASSIVEKILLSREQ = 50;
         int currentKillCount = 0;
         public GameObject ability1Gun;
+        bool didRoll = false;
         
         // Start is called before the first frame update
         void Start()
@@ -20,7 +21,14 @@ namespace Noah {
         void Update()
         {
             ActiveUpdate();
+            didRoll = false;
         }
+
+        public void OnPlayerRoll(Transform player)
+        {
+            didRoll = true;
+        }
+
         public void OnPlayerKill(Transform player, Transform target)
         {
             currentKillCount++;
@@ -48,7 +56,7 @@ namespace Noah {
         public void ActiveUpdate()
         {
             AbilityPayload cap = new();
-
+            cap.didRoll = didRoll;
             cap.gunManager = transform.parent.GetChild(0).gameObject.GetComponent<GunManager>();
             ps.active.Update(cap);
         }

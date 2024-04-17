@@ -16,40 +16,20 @@ public class PlayerBasicAttack : MonoBehaviour
     // TODO: implement shoot-roll cancelling
     void Update()
     {
+        if (GetComponent<BasicPlayerController>().isRolling) { return; }
         HandleInput();
-        //if (!GetComponent<BasicPlayerController>().isRolling && gunManager.Current() is IChargeableWeapon weapon)
-        //{
-        //    if (didPlayerClickMouse)
-        //    {
-        //        weapon.StartCharging();
-        //    }
-        //    else if (didPlayerReleaseMouse)
-        //    {
-        //        gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        //    }
-        //}
-        //else if (isPlayerHoldingDownMouse && !GetComponent<BasicPlayerController>().isRolling)
-        //{
-        //    gunManager.Current().OnActivation(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        //    if (gunManager.Current().ammo.Current == 0) { isPlayerHoldingDownMouse = false; }
-        //}
-        if (!GetComponent<BasicPlayerController>().isRolling)
+        AttackInputManagers.IAttackInputManager attackInputManager = gunManager.Current().attackInputManager;
+        if (isPlayerHoldingDownMouse)
         {
-            AttackInputManagers.IAttackInputManager attackInputManager = gunManager.Current().attackInputManager;
-            if (isPlayerHoldingDownMouse)
-            {
-                attackInputManager.OnHold(gunManager);
-            }
-            if (didPlayerClickMouse)
-            {
-                attackInputManager.OnClick(gunManager);
-            }
-            if (didPlayerReleaseMouse)
-            {
-                attackInputManager.OnRelease(gunManager);
-            }
+            attackInputManager.OnHold(gunManager);
         }
-
+        if (didPlayerClickMouse)
+        {
+            attackInputManager.OnClick(gunManager);        }
+        if (didPlayerReleaseMouse)
+        {
+            attackInputManager.OnRelease(gunManager);
+        }
     }
 
     void HandleInput()

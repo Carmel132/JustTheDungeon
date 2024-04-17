@@ -18,7 +18,7 @@ public class EventManager : MonoBehaviour, IPlayerMessages, IWeaponMessages, IPl
 
     /// <summary>
     /// Registers obj to receive eventGroup events
-    /// </summary>
+    ///     /// </summary>
     /// <param name="eventGroup">The event group the object is registering to</param>
     /// <param name="obj">The gameobject being registered</param>
     public void registerEvent(EventGroup eventGroup, GameObject obj)
