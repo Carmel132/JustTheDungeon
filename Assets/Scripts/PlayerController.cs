@@ -80,7 +80,7 @@ public interface IPlayerRollable
 /// <summary>
 /// Controls player movement and input excluding attacks
 /// </summary>
-public class BasicPlayerController : MonoBehaviour, IPlayerController
+public class PlayerController : MonoBehaviour, IPlayerController
 {
     public EventManager EM;
     public PlayerEffects stats { get; set; }

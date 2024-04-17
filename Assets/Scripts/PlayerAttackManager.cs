@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Handles user-to-player-to-gun manager linking
 /// </summary>
-public class PlayerBasicAttack : MonoBehaviour
+public class PlayerAttackManager : MonoBehaviour
 {
     GunManager gunManager;
     bool isPlayerHoldingDownMouse = false;
@@ -16,7 +16,7 @@ public class PlayerBasicAttack : MonoBehaviour
     // TODO: implement shoot-roll cancelling
     void Update()
     {
-        if (GetComponent<BasicPlayerController>().isRolling) { return; }
+        if (GetComponent<PlayerController>().isRolling) { return; }
         HandleInput();
         AttackInputManagers.IAttackInputManager attackInputManager = gunManager.Current().attackInputManager;
         if (isPlayerHoldingDownMouse)

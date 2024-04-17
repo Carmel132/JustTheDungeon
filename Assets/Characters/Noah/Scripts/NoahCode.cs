@@ -52,7 +52,7 @@ namespace Noah
                 payload.gunManager.weapons.Add(weapon);
                 payload.gunManager.LastWeapon();
                 payload.gunManager.locked = true;
-                payload.player.gameObject.GetComponent<BasicPlayerController>().canMove = false;
+                payload.player.gameObject.GetComponent<PlayerController>().canMove = false;
                 duration.Reset();
             }
         }
@@ -66,7 +66,7 @@ namespace Noah
                 payload.gunManager.locked = false;
                 payload.gunManager.FirstWeapon();
                 payload.gunManager.weapons.RemoveAt(payload.gunManager.weapons.Count - 1);
-                payload.gunManager.transform.parent.gameObject.GetComponent<BasicPlayerController>().canMove = true;
+                payload.gunManager.transform.parent.gameObject.GetComponent<PlayerController>().canMove = true;
                 GameObject.Destroy(gun);
                 cd.Reset();
             }
