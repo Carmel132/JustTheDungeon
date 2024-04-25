@@ -71,6 +71,7 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     }
     void Update()
     {
+        ReloadIndicator.transform.position = transform.position + new Vector3(0, 2.5f, 0);
         if (transform.childCount != weapons.Count)
         {
             UpdateWeaponList();
@@ -84,7 +85,7 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     }
     void OnGUI()
     {
-        ReloadIndicator.transform.position = transform.position + new Vector3(0, 2.5f, 0);
+        
     }
     /// <summary>
     /// Disables all non-selected weapon game objects

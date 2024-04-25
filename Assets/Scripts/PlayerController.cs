@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     public bool isRolling { get; set; } = false;
     [field: SerializeField]
     public TimeCooldown rollDuration { get; set; }
+    Rigidbody2D rb;
     public bool canMove = true;
     Vector2 rollDirection = Vector2.zero;
 
@@ -97,6 +98,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
         stats = GetComponent<PlayerEffects>();
         EM.registerEvent(EventGroup.PlayerStats, gameObject);
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -110,7 +112,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         if (!isRolling && canMove)
         {
             Vector2 movement = new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            transform.position += PlayerStats.SpeedMultiplier * stats.stats.movementSpeed * Time.deltaTime * (Vector3)movement;
+            rb.velocity = PlayerStats.SpeedMultiplier * stats.stats.movementSpeed * (Vector3)movement;
             if (movement.magnitude != 0)
             {
                 ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerMove(transform));
@@ -118,7 +120,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         }
         else if (isRolling)
         {
-            transform.position += PlayerStats.SpeedMultiplier * stats.stats.rollSpeed * Time.deltaTime * (Vector3)rollDirection;
+            rb.velocity =  PlayerStats.SpeedMultiplier * stats.stats.rollSpeed * (Vector3)rollDirection;
             //ExecuteEvents.Execute<IPlayerMessages>(EM.gameObject, null, (x, y) => x.OnPlayerRoll(transform));
             if (rollDuration.isAvailable) 
             { 

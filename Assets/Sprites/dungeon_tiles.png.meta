@@ -2041,8 +2041,8 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: 12}
-        - {x: -8, y: -12}
-        - {x: 8, y: -12}
+        - {x: -8, y: -4}
+        - {x: 8, y: -4}
         - {x: 8, y: 12}
       tessellationDetail: 0
       bones: []
@@ -4283,15 +4283,15 @@ TextureImporter:
       dungeon_tiles_181: 1852225771
       dungeon_tiles_161: -666931027
       dungeon_tiles_30: 1768539970
-      dungeon_tiles_45: 1067876367
-      dungeon_tiles_115: 1124470822
-      dungeon_tiles_123: 1513010566
       dungeon_tiles_5: 363745238
-      dungeon_tiles_155: -842569046
       dungeon_tiles_9: -1812605980
+      dungeon_tiles_123: 1513010566
+      dungeon_tiles_17: 1147424895
+      dungeon_tiles_155: -842569046
+      dungeon_tiles_45: 1067876367
       dungeon_tiles_121: -1347215102
       dungeon_tiles_42: 1275065851
-      dungeon_tiles_17: 1147424895
+      dungeon_tiles_115: 1124470822
       dungeon_tiles_177: 2069856556
       dungeon_tiles_77: 295549365
       dungeon_tiles_26: -1182128038
