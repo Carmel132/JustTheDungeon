@@ -732,8 +732,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2739288640283313183, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
       propertyPath: chargeDuration.<duration>k__BackingField
-      value: 0.48
+      value: 1.56
       objectReference: {fileID: 0}
+    - target: {fileID: 4778120812229088535, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bebb494129c19a04d84dbd9b1aa9fafa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1c95731a2323104c8799a7c19dafded, type: 3}
 --- !u!1 &519420028
@@ -1223,6 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f459ca5b57740e4b9198034e2515a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &1044029169
 GameObject:
   m_ObjectHideFlags: 0

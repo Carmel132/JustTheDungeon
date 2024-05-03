@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 599d2535945d53e418d2721cf1222c2d
+guid: 1c6a08f5c0df7cb4498e7d55fc6283d6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,862 +117,862 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_0
+      name: masterswordShootAnimationNormalMap-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bd18102149294a4aaeab0eceb8b0158
-      internalID: 2105958096
+      spriteID: 6ef49e03376ab144a9c2964ad71665ce
+      internalID: -1298851782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_1
+      name: masterswordShootAnimationNormalMap-Sheet_1
       rect:
         serializedVersion: 2
         x: 252
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95b8cc6ad7767714b82d7adbbd91b44f
-      internalID: -346082260
+      spriteID: 8f2c64c5e0eda804ab25df3b542061f9
+      internalID: 86749073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_2
+      name: masterswordShootAnimationNormalMap-Sheet_2
       rect:
         serializedVersion: 2
         x: 504
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c203f2f287730941abd132698391f17
-      internalID: 1414620816
+      spriteID: ed980648586b3f7409777475afb0117e
+      internalID: 325278449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_3
+      name: masterswordShootAnimationNormalMap-Sheet_3
       rect:
         serializedVersion: 2
         x: 756
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29bc3b20ef599cb47977e74866770b2d
-      internalID: 2141512721
+      spriteID: e60ef5d8e1ce64f4ab2421de23669967
+      internalID: -64209128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_4
+      name: masterswordShootAnimationNormalMap-Sheet_4
       rect:
         serializedVersion: 2
         x: 1008
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f12a9855c420734b97e49d53e1cfb5b
-      internalID: -545181756
+      spriteID: 81df3ffac14aef5489e9b3b6be76d742
+      internalID: -1841526985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_5
+      name: masterswordShootAnimationNormalMap-Sheet_5
       rect:
         serializedVersion: 2
         x: 1260
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d7fd522030e78b4092e7fa32a0ea306
-      internalID: 801847122
+      spriteID: 978289525566b2c4686abe859fe1f859
+      internalID: 1469706183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_6
+      name: masterswordShootAnimationNormalMap-Sheet_6
       rect:
         serializedVersion: 2
         x: 1512
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ad9c9fe18f3c204fbdd4b87cc989adb
-      internalID: 267618464
+      spriteID: 46ca0b5a9a51b8a4cb8c90f9ccc7b99c
+      internalID: -1120291283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_7
+      name: masterswordShootAnimationNormalMap-Sheet_7
       rect:
         serializedVersion: 2
         x: 1764
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63990a3ad0c144f4994bd915bbb64295
-      internalID: 1383105805
+      spriteID: 9dd634a9e9d4c4f4baac36441ff46308
+      internalID: -900488939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_8
+      name: masterswordShootAnimationNormalMap-Sheet_8
       rect:
         serializedVersion: 2
         x: 2016
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27355e7431cd0a74a8376b401cf87431
-      internalID: -206852990
+      spriteID: 9d0444f33a670484f84964389beb11e6
+      internalID: -129803052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_9
+      name: masterswordShootAnimationNormalMap-Sheet_9
       rect:
         serializedVersion: 2
         x: 2268
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3c58c250d5bd8c438927b6069ecf1f2
-      internalID: -985985624
+      spriteID: a8692a1abbb809440888fd7ecde19ea5
+      internalID: -82149507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_10
+      name: masterswordShootAnimationNormalMap-Sheet_10
       rect:
         serializedVersion: 2
         x: 2520
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d3a1a1110a2ec4a9c8f4a9a203432d
-      internalID: 714988189
+      spriteID: f014e33b745fd7c48a7971e626d73175
+      internalID: 1209411726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_11
+      name: masterswordShootAnimationNormalMap-Sheet_11
       rect:
         serializedVersion: 2
         x: 2772
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 662eb1322adf0604084df20c4b9befad
-      internalID: 409534040
+      spriteID: 3cc05ed9d103f1b4fbb8377d50aeb969
+      internalID: 708412588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_12
+      name: masterswordShootAnimationNormalMap-Sheet_12
       rect:
         serializedVersion: 2
         x: 3024
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a99e2d5a657c74fb36989bc94c14e3
-      internalID: 1098582624
+      spriteID: cf5ead930d243604093867e6a0a01aab
+      internalID: -1887599674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_13
+      name: masterswordShootAnimationNormalMap-Sheet_13
       rect:
         serializedVersion: 2
         x: 3276
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1ae358a13ca1a143a320c99bf2c8c00
-      internalID: 102914378
+      spriteID: c1b58a19ab38b0e42b4b7d7d10ee01e7
+      internalID: -800119427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_14
+      name: masterswordShootAnimationNormalMap-Sheet_14
       rect:
         serializedVersion: 2
         x: 3528
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40d1827594dffcc4ea039b7466ebad80
-      internalID: -76113427
+      spriteID: e13342e7a397fbc429beb46ca08f13bb
+      internalID: 797760140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_15
+      name: masterswordShootAnimationNormalMap-Sheet_15
       rect:
         serializedVersion: 2
         x: 3780
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee39450a87889e4e909cb6e56b1721b
-      internalID: -290885116
+      spriteID: afcdecd811921894c85a1eeb5314c9f5
+      internalID: 1647892090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_16
+      name: masterswordShootAnimationNormalMap-Sheet_16
       rect:
         serializedVersion: 2
         x: 4032
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea2ca916c31823945b7c66a22e103ca6
-      internalID: -127215607
+      spriteID: a631b041e3f08804993e5387dbfd98c3
+      internalID: 1533628556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_17
+      name: masterswordShootAnimationNormalMap-Sheet_17
       rect:
         serializedVersion: 2
         x: 4284
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3089e780d94b4c440b0f06340f1610c9
-      internalID: -1574698326
+      spriteID: 2b6a6733d1ff5b14798efaf9383f58e0
+      internalID: -396520817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_18
+      name: masterswordShootAnimationNormalMap-Sheet_18
       rect:
         serializedVersion: 2
         x: 4536
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4407c986eb2644eb2a2a6383633087
-      internalID: 1241787541
+      spriteID: 5525a770ec1ad134f811ba135335cc52
+      internalID: 1882520025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_19
+      name: masterswordShootAnimationNormalMap-Sheet_19
       rect:
         serializedVersion: 2
         x: 4788
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27f90fe2e6cfc5149ada6f44528c246c
-      internalID: -1237599108
+      spriteID: 5f2a930782455b040a56b7861e3f8c2a
+      internalID: -1757068672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_20
+      name: masterswordShootAnimationNormalMap-Sheet_20
       rect:
         serializedVersion: 2
         x: 5040
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b074e6503b9e6b45afa90a46fc5359a
-      internalID: -581938853
+      spriteID: 9f73a5e3f2ea6a1428a4c11ed066e5a9
+      internalID: 387074573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_21
+      name: masterswordShootAnimationNormalMap-Sheet_21
       rect:
         serializedVersion: 2
         x: 5292
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dffbec14f40f01f4f8b6ade4105c2963
-      internalID: 1528887260
+      spriteID: 6b842dd010fda7f4e8866da53e546574
+      internalID: 834317690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_22
+      name: masterswordShootAnimationNormalMap-Sheet_22
       rect:
         serializedVersion: 2
         x: 5544
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a81f2cd5c234ada45867c4ea0380fb56
-      internalID: -1495401465
+      spriteID: e73aad4163a5b4241bdef4a31d201b16
+      internalID: -1354439556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_23
+      name: masterswordShootAnimationNormalMap-Sheet_23
       rect:
         serializedVersion: 2
         x: 5796
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48e7f76ea2b486a41b3f31c0bf53b7bd
-      internalID: 1391772976
+      spriteID: 107ae8988beb6f24fa6f1788134d31fa
+      internalID: -926526665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_24
+      name: masterswordShootAnimationNormalMap-Sheet_24
       rect:
         serializedVersion: 2
         x: 6048
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d03f56c55a8ecf44bb22a13ae809676
-      internalID: 1730020571
+      spriteID: 90d6da0a84d2b1b46b0cdc8bec80e600
+      internalID: -1400493139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_25
+      name: masterswordShootAnimationNormalMap-Sheet_25
       rect:
         serializedVersion: 2
         x: 6300
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d634ffa255e26a94ea6450656374030f
-      internalID: 1698794028
+      spriteID: 104207151869e7942876e4c4d08ff4d0
+      internalID: 1512098955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_26
+      name: masterswordShootAnimationNormalMap-Sheet_26
       rect:
         serializedVersion: 2
         x: 6552
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13614acd514313b4d8854028e935b7bc
-      internalID: -1066250081
+      spriteID: 3b02dba96dd440548b14694a72d238c7
+      internalID: -558505130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_27
+      name: masterswordShootAnimationNormalMap-Sheet_27
       rect:
         serializedVersion: 2
         x: 6804
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1171f5170976cb43a2c3862332b12cd
-      internalID: 573367852
+      spriteID: 14e245c695c858e4b86799f18f9b8543
+      internalID: -1642475077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_28
+      name: masterswordShootAnimationNormalMap-Sheet_28
       rect:
         serializedVersion: 2
         x: 7056
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc4ddb3733a09ca48b115dbdc8fa333c
-      internalID: 1061903720
+      spriteID: 017c548fd864559488c5eeb96635d44f
+      internalID: -584280037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_29
+      name: masterswordShootAnimationNormalMap-Sheet_29
       rect:
         serializedVersion: 2
         x: 7308
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e50c275d36c82043ad405874944c2b8
-      internalID: 1219417414
+      spriteID: d7b8253a655aa2e4191e520dbc6197fd
+      internalID: 1385133281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_30
+      name: masterswordShootAnimationNormalMap-Sheet_30
       rect:
         serializedVersion: 2
         x: 7560
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33c7eb91115814747bb164d5d0b75400
-      internalID: 835681576
+      spriteID: 9fb0160c5e9372346982a6000d7d2255
+      internalID: 599399822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_31
+      name: masterswordShootAnimationNormalMap-Sheet_31
       rect:
         serializedVersion: 2
         x: 7812
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 012049eb08acc7d43a0a102b190d8d3b
-      internalID: -1447171834
+      spriteID: d661b48f4266b6f42b44b8a2f5d0827b
+      internalID: -1410141728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_32
+      name: masterswordShootAnimationNormalMap-Sheet_32
       rect:
         serializedVersion: 2
         x: 8064
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f59d070170f32649a7814828530c875
-      internalID: 1068310458
+      spriteID: 0505bfbd9233e214ca4402017da32be7
+      internalID: 330629218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_33
+      name: masterswordShootAnimationNormalMap-Sheet_33
       rect:
         serializedVersion: 2
         x: 8316
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a66f31d6b9b40bc438c0917c6f5002f4
-      internalID: -767941224
+      spriteID: a1030f28b5e38224599b428277e37c03
+      internalID: -860401513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_34
+      name: masterswordShootAnimationNormalMap-Sheet_34
       rect:
         serializedVersion: 2
         x: 8568
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec8a2285e30929f4b88e0eddd403f0cb
-      internalID: -1223987190
+      spriteID: 94bc9ef96dc6f8f4cbb426a1ef4de8f6
+      internalID: -1798416383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_35
+      name: masterswordShootAnimationNormalMap-Sheet_35
       rect:
         serializedVersion: 2
         x: 8820
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d40407d47cc2104c87643d14f941c5c
-      internalID: 1574184354
+      spriteID: 1d5f7271f511a444e9dbffd71e4bb747
+      internalID: 445660693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_36
+      name: masterswordShootAnimationNormalMap-Sheet_36
       rect:
         serializedVersion: 2
         x: 9072
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1f6dcb502737e849b2a5a62c1115de4
-      internalID: 329279819
+      spriteID: e31305abb63e64142811b3888ba7085e
+      internalID: 2146333399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_37
+      name: masterswordShootAnimationNormalMap-Sheet_37
       rect:
         serializedVersion: 2
         x: 9324
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e94fa7fc405bd9246b17ab52f7dadfca
-      internalID: 660991427
+      spriteID: b86f49f6ed1e18148828f62b82b535db
+      internalID: 796933305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_38
+      name: masterswordShootAnimationNormalMap-Sheet_38
       rect:
         serializedVersion: 2
         x: 9576
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c6615c3e7c6034e8c187d2604cac9b
-      internalID: 487787191
+      spriteID: 2d66aa7a820a98e43b700efd4645da42
+      internalID: -151630095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_39
+      name: masterswordShootAnimationNormalMap-Sheet_39
       rect:
         serializedVersion: 2
         x: 9828
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fa243a3ea09c8f4ea8086255c74d8df
-      internalID: 1021075769
+      spriteID: 108f32242ad4711409f92d6fb7c776ec
+      internalID: -1131096788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: masterswordShootAnimation1-Sheet_40
+      name: masterswordShootAnimationNormalMap-Sheet_40
       rect:
         serializedVersion: 2
         x: 10080
         y: 0
         width: 252
         height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b356de94c6486d14c875859021022a26
-      internalID: 250371885
+      spriteID: 0cd6009539b398b4880e6dadec8e7a61
+      internalID: 1554619005
       vertices: []
       indices: 
       edges: []
@@ -986,51 +986,49 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 1c6a08f5c0df7cb4498e7d55fc6283d6, type: 3}
-      name: _Emission
+    secondaryTextures: []
     nameFileIdTable:
-      masterswordShootAnimation1-Sheet_3: 2141512721
-      masterswordShootAnimation1-Sheet_33: -767941224
-      masterswordShootAnimation1-Sheet_14: -76113427
-      masterswordShootAnimation1-Sheet_2: 1414620816
-      masterswordShootAnimation1-Sheet_20: -581938853
-      masterswordShootAnimation1-Sheet_17: -1574698326
-      masterswordShootAnimation1-Sheet_32: 1068310458
-      masterswordShootAnimation1-Sheet_34: -1223987190
-      masterswordShootAnimation1-Sheet_22: -1495401465
-      masterswordShootAnimation1-Sheet_23: 1391772976
-      masterswordShootAnimation1-Sheet_4: -545181756
-      masterswordShootAnimation1-Sheet_27: 573367852
-      masterswordShootAnimation1-Sheet_36: 329279819
-      masterswordShootAnimation1-Sheet_10: 714988189
-      masterswordShootAnimation1-Sheet_24: 1730020571
-      masterswordShootAnimation1-Sheet_19: -1237599108
-      masterswordShootAnimation1-Sheet_12: 1098582624
-      masterswordShootAnimation1-Sheet_18: 1241787541
-      masterswordShootAnimation1-Sheet_38: 487787191
-      masterswordShootAnimation1-Sheet_11: 409534040
-      masterswordShootAnimation1-Sheet_9: -985985624
-      masterswordShootAnimation1-Sheet_6: 267618464
-      masterswordShootAnimation1-Sheet_16: -127215607
-      masterswordShootAnimation1-Sheet_31: -1447171834
-      masterswordShootAnimation1-Sheet_35: 1574184354
-      masterswordShootAnimation1-Sheet_26: -1066250081
-      masterswordShootAnimation1-Sheet_30: 835681576
-      masterswordShootAnimation1-Sheet_39: 1021075769
-      masterswordShootAnimation1-Sheet_1: -346082260
-      masterswordShootAnimation1-Sheet_40: 250371885
-      masterswordShootAnimation1-Sheet_21: 1528887260
-      masterswordShootAnimation1-Sheet_15: -290885116
-      masterswordShootAnimation1-Sheet_37: 660991427
-      masterswordShootAnimation1-Sheet_28: 1061903720
-      masterswordShootAnimation1-Sheet_8: -206852990
-      masterswordShootAnimation1-Sheet_13: 102914378
-      masterswordShootAnimation1-Sheet_0: 2105958096
-      masterswordShootAnimation1-Sheet_25: 1698794028
-      masterswordShootAnimation1-Sheet_7: 1383105805
-      masterswordShootAnimation1-Sheet_5: 801847122
-      masterswordShootAnimation1-Sheet_29: 1219417414
+      masterswordShootAnimationNormalMap-Sheet_2: 325278449
+      masterswordShootAnimationNormalMap-Sheet_10: 1209411726
+      masterswordShootAnimationNormalMap-Sheet_35: 445660693
+      masterswordShootAnimationNormalMap-Sheet_13: -800119427
+      masterswordShootAnimationNormalMap-Sheet_0: -1298851782
+      masterswordShootAnimationNormalMap-Sheet_3: -64209128
+      masterswordShootAnimationNormalMap-Sheet_25: 1512098955
+      masterswordShootAnimationNormalMap-Sheet_27: -1642475077
+      masterswordShootAnimationNormalMap-Sheet_16: 1533628556
+      masterswordShootAnimationNormalMap-Sheet_29: 1385133281
+      masterswordShootAnimationNormalMap-Sheet_6: -1120291283
+      masterswordShootAnimationNormalMap-Sheet_21: 834317690
+      masterswordShootAnimationNormalMap-Sheet_23: -926526665
+      masterswordShootAnimationNormalMap-Sheet_31: -1410141728
+      masterswordShootAnimationNormalMap-Sheet_32: 330629218
+      masterswordShootAnimationNormalMap-Sheet_40: 1554619005
+      masterswordShootAnimationNormalMap-Sheet_1: 86749073
+      masterswordShootAnimationNormalMap-Sheet_26: -558505130
+      masterswordShootAnimationNormalMap-Sheet_38: -151630095
+      masterswordShootAnimationNormalMap-Sheet_24: -1400493139
+      masterswordShootAnimationNormalMap-Sheet_7: -900488939
+      masterswordShootAnimationNormalMap-Sheet_36: 2146333399
+      masterswordShootAnimationNormalMap-Sheet_15: 1647892090
+      masterswordShootAnimationNormalMap-Sheet_19: -1757068672
+      masterswordShootAnimationNormalMap-Sheet_28: -584280037
+      masterswordShootAnimationNormalMap-Sheet_11: 708412588
+      masterswordShootAnimationNormalMap-Sheet_12: -1887599674
+      masterswordShootAnimationNormalMap-Sheet_8: -129803052
+      masterswordShootAnimationNormalMap-Sheet_5: 1469706183
+      masterswordShootAnimationNormalMap-Sheet_18: 1882520025
+      masterswordShootAnimationNormalMap-Sheet_9: -82149507
+      masterswordShootAnimationNormalMap-Sheet_17: -396520817
+      masterswordShootAnimationNormalMap-Sheet_22: -1354439556
+      masterswordShootAnimationNormalMap-Sheet_30: 599399822
+      masterswordShootAnimationNormalMap-Sheet_20: 387074573
+      masterswordShootAnimationNormalMap-Sheet_37: 796933305
+      masterswordShootAnimationNormalMap-Sheet_14: 797760140
+      masterswordShootAnimationNormalMap-Sheet_33: -860401513
+      masterswordShootAnimationNormalMap-Sheet_4: -1841526985
+      masterswordShootAnimationNormalMap-Sheet_39: -1131096788
+      masterswordShootAnimationNormalMap-Sheet_34: -1798416383
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
