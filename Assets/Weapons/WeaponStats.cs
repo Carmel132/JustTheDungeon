@@ -10,4 +10,5 @@ public class WeaponStats : MonoBehaviour
     public TimeCooldown chargeDuration;
     public bool reloadable = true;
     public bool barrelGlowEffect = true;
+    public bool hasWeaponAnimations = false;
 }

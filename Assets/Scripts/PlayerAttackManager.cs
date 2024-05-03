@@ -19,16 +19,22 @@ public class PlayerAttackManager : MonoBehaviour
         if (GetComponent<PlayerController>().isRolling) { return; }
         HandleInput();
         AttackInputManagers.IAttackInputManager attackInputManager = gunManager.Current().attackInputManager;
+        WeaponAnimation? weaponAnimation = gunManager.Current().weaponAnimation;
         if (isPlayerHoldingDownMouse)
         {
             attackInputManager.OnHold(gunManager);
+            weaponAnimation?.OnHold();
         }
         if (didPlayerClickMouse)
         {
-            attackInputManager.OnClick(gunManager);        }
+            attackInputManager.OnClick(gunManager);
+            weaponAnimation?.OnClick();
+        }
         if (didPlayerReleaseMouse)
         {
             attackInputManager.OnRelease(gunManager);
+            weaponAnimation?.OnRelease();
+            Debug.Log("Hi");
         }
     }
 

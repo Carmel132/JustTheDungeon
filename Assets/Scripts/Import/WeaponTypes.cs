@@ -10,6 +10,7 @@ public interface IWeapon : IAbility<Vector3>, IWeaponMessages
     GunEffectManager stats { get; set; }
     BasicAmmoManager ammo { get; set; }
     AttackInputManagers.IAttackInputManager attackInputManager { get ; set; }
+    WeaponAnimation weaponAnimation { get; set; }
     void IWeaponMessages.AddStatChange((GunEffectManager.GunEffectManagerTarget, EffectFactor, TimeCooldown?) f)
     {
         stats.effectManager.Add(stats.effectManager.newId(), f);
@@ -43,6 +44,7 @@ public static class AttackInputManagers
         void OnHold(GunManager gm);
         void OnRelease(GunManager gm);
     }
+
     public class AutomaticAttack : IAttackInputManager
     {
         public void OnClick(GunManager gm)

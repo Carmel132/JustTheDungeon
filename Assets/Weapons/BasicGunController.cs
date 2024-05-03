@@ -14,6 +14,7 @@ public class BasicGunController : MonoBehaviour, IWeapon
     public EventManager em;
     public BasicAmmoManager ammo { get; set; }
     public GunEffectManager stats { get; set; }
+    public WeaponAnimation weaponAnimation {get;set;}
 
     public AttackInputManagers.IAttackInputManager attackInputManager { get; set; }
     public void OnActivation(Vector3 target)
@@ -40,6 +41,7 @@ public class BasicGunController : MonoBehaviour, IWeapon
         stats = GetComponent<GunEffectManager>();
         em.registerEvent(EventGroup.Weapon, gameObject);
         ammo = GetComponent<BasicAmmoManager>();
+        if (GetComponent<WeaponStats>().hasWeaponAnimations) { weaponAnimation = GetComponent<WeaponAnimation>(); }
         attackInputManager = new AttackInputManagers.AutomaticAttack();
     }
 }

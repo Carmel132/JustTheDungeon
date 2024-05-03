@@ -68,7 +68,10 @@ MonoBehaviour:
   damage: 1
   speed: 1000
   bloom: 1
+  chargeDuration:
+    <duration>k__BackingField: 0
   reloadable: 1
+  barrelGlowEffect: 1
 --- !u!114 &2739288640283313180
 MonoBehaviour:
   m_ObjectHideFlags: 0

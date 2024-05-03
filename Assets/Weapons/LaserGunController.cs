@@ -13,6 +13,7 @@ public class LaserGunController : MonoBehaviour, IChargeableWeapon, IWeapon
     public bool laserTailFollow = false; // will tail of laser follow tip of gun barrel
     public GunEffectManager stats { get; set; }
     public BasicAmmoManager ammo { get; set; }
+    public WeaponAnimation weaponAnimation { get; set; }
 
     public AttackInputManagers.IAttackInputManager attackInputManager { get; set; }
 
@@ -52,6 +53,7 @@ public class LaserGunController : MonoBehaviour, IChargeableWeapon, IWeapon
         stats = GetComponent<GunEffectManager>();
         em.registerEvent(EventGroup.Weapon, gameObject);
         ammo = GetComponent<BasicAmmoManager>();
+        if (GetComponent<WeaponStats>().hasWeaponAnimations) { weaponAnimation = GetComponent<WeaponAnimation>(); }
         charging = stats.stats.chargeDuration;
         attackInputManager = new AttackInputManagers.ChargeAttack();
     }
@@ -59,6 +61,9 @@ public class LaserGunController : MonoBehaviour, IChargeableWeapon, IWeapon
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(charging.percentDone);
+        if (stats.stats.hasWeaponAnimations)
+        {
+            weaponAnimation.animator.SetFloat("HoldLength", 1/stats.stats.chargeDuration.duration);
+        }
     }
 }
