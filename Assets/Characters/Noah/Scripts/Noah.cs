@@ -9,12 +9,14 @@ namespace Noah {
         const int PASSIVEKILLSREQ = 50;
         int currentKillCount = 0;
         public GameObject ability1Gun;
+        public GameObject ability2Gun;
         bool didRoll = false;
         
         // Start is called before the first frame update
         void Start()
         {
             EM.registerEvent(EventGroup.Player, gameObject);
+            ActiveStart();
         }
 
         // Update is called once per frame
@@ -64,6 +66,7 @@ namespace Noah {
         public void ActiveStart()
         {
             AbilityPayload cap = new();
+            cap.Ability2Gun = ability2Gun;
             ps.active.Start(cap);
         }
     }

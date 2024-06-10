@@ -9,6 +9,7 @@ namespace Noah
         public Transform player { get; set; }
         public bool getShield = false;
         public GameObject Ability1Gun { get; set; }
+        public GameObject Ability2Gun { get; set; }
         public GunManager gunManager { get; set; }
         public bool didRoll = false;
     }
@@ -16,7 +17,7 @@ namespace Noah
     public class Abilities : IPlayerAbilities<AbilityPayload>
     {
         public IPassiveAbility<AbilityPayload> passive { get; set; } = new Passive();
-        public IActiveAbility<AbilityPayload> active { get; set; } = new Active1();
+        public IActiveAbility<AbilityPayload> active { get; set; } = new Active2();
         public IUltimateAbility<AbilityPayload> ultimate { get; set; }
     }
 
@@ -42,7 +43,7 @@ namespace Noah
         {
             if (!cd.isAvailable || isActive) { return; }
             gun = GameObject.Instantiate(payload.Ability1Gun, payload.player.GetChild(0));
-            gun.GetComponent<BasicGunController>().parent = payload.player.parent.GetChild(1);
+            //gun.GetComponent<BasicGunController>().parent = payload.player.parent.GetChild(1);
 
             IWeapon weapon = Util.GetComponentThatImplements<IWeapon>(gun);
             if (weapon != null)
@@ -77,4 +78,56 @@ namespace Noah
             cd.Reset();
         }
     }
+
+    public class Active2 : IActiveAbility<AbilityPayload>
+    {
+        public ICooldown cd { get; set; } = new TimeCooldown(4);
+        GameObject gunPrefab;
+        NoahGunController gunController;
+        bool active = false;
+        int gunIdx;
+        public void OnActivation(AbilityPayload payload)
+        {
+            if (!cd.isAvailable) { return; }
+            if (gunController != null)
+            {
+                if (payload.gunManager.Current() is NoahGunController controller)
+                {
+                    payload.gunManager.NextWeapon();
+                }
+                else
+                {
+                    payload.gunManager.SetWeaponIndex(gunIdx);
+                }
+            }
+            else
+            {
+                if (active) 
+                {
+                    active = false;
+                    cd.Reset(); 
+                } 
+                else
+                {
+                    GameObject gun = GameObject.Instantiate(gunPrefab, payload.player.GetChild(0));
+
+                    IWeapon weapon = Util.GetComponentThatImplements<IWeapon>(gun);
+                    payload.gunManager.weapons.Add(weapon);
+                    payload.gunManager.LastWeapon();
+                    gunController = gun.GetComponent<NoahGunController>();
+                    gunIdx = payload.gunManager.GetWeaponIndex();
+                    active = true;
+                }
+                
+            }
+        }
+
+        public void Start(AbilityPayload payload)
+        {
+            cd.Reset();
+            gunPrefab = payload.Ability2Gun;
+            Debug.Log(payload.Ability2Gun);
+        }
+    }
+
 }

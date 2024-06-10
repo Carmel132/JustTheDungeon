@@ -77,11 +77,19 @@ public class GunManager : MonoBehaviour, IWeaponMessages
             UpdateWeaponList();
         }
         DisableNonCurrent();
-
+        DestroyOnEmptyHandler();
         if (ReloadIndicator.GetBool("isReloading") && cd.isAvailable)
         {
             StopReloadIndicator();
         }
+    }
+    public int GetWeaponIndex()
+    {
+        return current;
+    }
+    public void SetWeaponIndex(int idx)
+    {
+        current = idx;
     }
     /// <summary>
     /// Disables all non-selected weapon game objects
@@ -116,6 +124,7 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     {
         if (locked) return;
         current = (current + 1) % weapons.Count;
+        if (!Current().stats.stats.scrollableTo) { NextWeapon(); }
     }
     /// <summary>
     /// Selects the previous weapon
@@ -124,6 +133,7 @@ public class GunManager : MonoBehaviour, IWeaponMessages
     {
         if (locked) return;
         current = (current == 0 ? weapons.Count : current) - 1;
+        if (!Current().stats.stats.scrollableTo) { PrevWeapon(); }
     }
     /// <summary>
     /// Get the currently selected weapon
@@ -184,6 +194,14 @@ public class GunManager : MonoBehaviour, IWeaponMessages
             {
                 weapons.Add(w);
             }
+        }
+    }
+    void DestroyOnEmptyHandler()
+    {
+        if (Current().stats.stats.destroyOnEmpty && Current().ammo.Total == 0)
+        {
+            Destroy(Current().stats.gameObject);
+            NextWeapon();
         }
     }
     //TODO: Interrupt reload on ability activation

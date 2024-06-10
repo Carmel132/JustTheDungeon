@@ -18,7 +18,7 @@ public class BasicAmmoManager : MonoBehaviour
 
     public int Current { get => currentLoadedBullets; set { currentLoadedBullets = value; } }
     public int Max { get => bulletsCarried; }
-
+    public int Total { get => bulletsCarried + Current; }
     public BasicAmmoManager(int _bulletsCarried, int _magSize, int _decrement, int start = -1)
     {
         bulletsCarried = _bulletsCarried;
