@@ -35,6 +35,7 @@ public class BasicAmmoManager : MonoBehaviour
         int bulletsLoadedFromCarried = Mathf.Min(bulletsNeeded, bulletsCarried);
         currentLoadedBullets += bulletsLoadedFromCarried;
         bulletsCarried -= bulletsLoadedFromCarried;
+
     }
 
     public bool isReloadable { get { return bulletsCarried > 0 && magSize - currentLoadedBullets > 0; } }

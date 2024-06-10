@@ -83,10 +83,6 @@ public class GunManager : MonoBehaviour, IWeaponMessages
             StopReloadIndicator();
         }
     }
-    void OnGUI()
-    {
-        
-    }
     /// <summary>
     /// Disables all non-selected weapon game objects
     /// </summary>

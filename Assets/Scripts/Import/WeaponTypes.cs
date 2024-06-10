@@ -20,6 +20,7 @@ public interface IWeapon : IAbility<Vector3>, IWeaponMessages
     {
         if (stats.stats.reloadSpeed.isAvailable && stats.stats.reloadable && ammo.isReloadable)
         {
+            Debug.Log("Here");
             stats.stats.reloadSpeed.Reset();
             //ammo.Reload();
         }
